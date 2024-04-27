@@ -1,0 +1,269 @@
+/* styles.css */
+
+/* ~~~~~~~~~~Text Formatting~~~~~~~~~~*/
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 200 to 800 */
+
+.changa-style {
+    font-family: "Changa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* General styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5dfad; /* Set the background color */
+    font-family:  "Changa", sans-serif; /* Default font family */
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+/* Section styling */
+.section {
+    padding: 80px 20px; /* Add padding */
+    text-align: center; /* Center text */
+}
+
+/* Heading Font */
+h1, h2, h3, h4, h5, h6 {
+    font-family:  "Changa", sans-serif; /* Set heading font family */
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Fullscreen sections */
+.fullscreen-section {
+  position: relative;
+  width: 100vw; /* Make the container fill the viewport width */
+  height: auto; /* Make the container fill the viewport height */
+  overflow: hidden; /* Hide overflow content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.background-image img {
+    width: 100%; /* Occupy full width of the container */
+    min-height: 250vh; /* Set the height to 200vh (2 times the viewport height) */
+    object-fit: cover; /* Ensure the image covers the entire container, cropping if necessary */
+    z-index: -1;
+  }
+
+  .background-image-size1 {
+    width: 100vw; /* Occupy full width of the container */
+    height: 100vh; /* Set the height to 200vh (2 times the viewport height) */
+    object-fit: cover; /* Ensure the image covers the entire container, cropping if necessary */
+    z-index: -1;
+}
+.background-image-size1 img {
+    width: 100vw; /* Occupy full width of the container */
+    height: 100vh; /* Set the height to 200vh (2 times the viewport height) */
+    object-fit: cover; /* Ensure the image covers the entire container, cropping if necessary */
+    z-index: -1;
+}
+  
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s 0.6s; /* Delay visibility change */
+}
+.show {
+    opacity: 1;
+    visibility: show;
+    transition: opacity 0.5s ease, visibility 0s 0.6s; /* Delay visibility change */
+}
+/* Sticky styling */
+.sticky {
+    position: fixed;
+    bottom: 50%; /* Center the button vertically */
+    left: 50%; /* Center the button horizontally */
+
+}
+/* Sticky logo */
+.sticky-logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  align-items: center; /* Align items vertically */
+}
+
+.sticky-logo img {
+  width: 50px; /* Adjust size as needed */
+}
+
+/* Sticky menu */
+.sticky-menu {
+  position: fixed;
+  top: 0;
+  right:0;
+  z-index: 4; /* Ensure the indicator is above other content */
+
+  padding: 10px 20px; /* Add padding */
+  margin: 0; /* Remove any margin */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+}
+
+.sticky-menu ul {
+  list-style: none;
+}
+
+.sticky-menu li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.sticky-menu a {
+  text-decoration: none;
+  color: black; /* Adjust color as needed */
+}
+
+/*change color */
+.background_color_change {
+
+    background-color:rgb(245,223,173,.4); /* Set the background color with 50% opacity */
+    padding: 15px; /* Add padding */
+    animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
+}
+
+/* Background image */
+.background-image {
+  position: relative;
+  
+}
+
+.background-image img {
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the background image */
+  display: flex;
+  flex-direction: column; /* Arrange children vertically */
+}
+
+.overlay {
+  flex: 1; /* Occupy remaining space */
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
+}
+.fadeOut {
+    animation: fadeOut 1s ease forwards; /* Apply fade-in animation */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity set to 0 */
+    }
+    to {
+        opacity: 1; /* Fade in to full opacity */
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1; /* Start with opacity set to 0 */
+    }
+    to {
+        opacity: 0; /* Fade in to full opacity */
+    }
+}
+.overlay h1 {
+  font-size: 3em;
+}
+
+.overlay p {
+  font-size: 1.5em;
+}
+#big-day h1 {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px; /* Add some space between paragraphs */
+}
+#big-day p {
+    display: block;
+    margin-bottom: 10px; /* Add some space between paragraphs */
+}
+
+/* RSVP button */
+
+.rsvp-button {
+    transform: translate(-50%, -50%); /* Center the button precisely */
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    z-index: 4;
+
+  }
+
+.rsvp-button:hover {
+  background-color: #842717; /* Adjust color as needed */
+}
+
+/* Half image section */
+.half-image-section {
+  display: flex;
+}
+
+.half-image-section img {
+  width: 100vw;
+}
+
+/* --------------FAQ Section-------------- */
+.faq-container {
+    background-color: #e0f2f1; /* Set background color */
+    padding: 20px; /* Add padding */
+    max-width: 400px; /* Set maximum width */
+    margin: 0 auto; /* Center horizontally */
+    position: relative;
+    margin-top: -10px; /* Add margin */
+    z-index: 4;
+}
+
+/* FAQ item styling */
+.faq-item {
+    margin-bottom: 20px; /* Add margin */
+}
+/* Answer styling */
+.answer {
+    display: none; /* Hide answer by default */
+}
+
+/* Toggle styling */
+.toggle {
+    float: right; /* Float toggle to the right */
+    cursor: pointer; /* Set cursor */
+}
+
+
+/* --------------Last section-------------- */
+.last-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Toggle styling */
+.toggle {
+    float: right; /* Float toggle to the right */
+    cursor: pointer; /* Set cursor */
+}
+
