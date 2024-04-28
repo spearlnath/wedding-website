@@ -78,16 +78,17 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to show the menu
     function showMenu() {
         clearTimeout(timeout); // Clear any existing timeout
-        document.getElementById('header').classList.remove('hidden');
+        document.getElementById('header').classList.add('fadeIn');
+        document.getElementById('header').classList.remove('fadeOut');
     }
 
     // Function to hide the menu after an idle period
     function hideMenu() {
         timeout = setTimeout(() => {
-            document.getElementById('header').classList.add('hidden');
+            document.getElementById('header').classList.remove('fadeIn');
+            document.getElementById('header').classList.add('fadeOut');
         }, 600); // Adjust the timeout value as needed (e.g., 3000 milliseconds = 3 seconds)
     }
-
 
     // Header sticky behavior
     const header = document.getElementById('header');
@@ -95,6 +96,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const fullscreenImage = document.querySelector('.fullscreen-image');
     const menu = document.getElementById('menu'); // Select the menu element
 
+    // Event listener to show menu on hover
+    window.addEventListener('mouseover', function() {
+        showMenu();
+    });
+    // Event listener to hide menu after mouse leaves menu area
+    window.addEventListener('mouseleave', function() {
+        hideMenu();
+    });
     // Update header position on scroll and resize
     function updateHeaderPosition() {
         showMenu(); // Show the menu when scrolling
@@ -190,6 +199,7 @@ window.addEventListener('scroll', function() {
         textOverlay.classList.add('fadeIn');
     }
 });
+
 window.addEventListener('DOMContentLoaded', function() {
     const textOverlay = document.querySelector('.text-overlay');
     const imageBottom = textOverlay.offsetTop + textOverlay.offsetHeight;
@@ -238,3 +248,4 @@ window.addEventListener('scroll', function() {
         }
     });
 });
+
