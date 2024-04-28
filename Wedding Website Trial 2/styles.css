@@ -34,6 +34,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     font-style: normal;
 }
+/*--------------Home----------------*/
+#home {
+  position: relative; /* Ensure the section is positioned relative */
+}
 
 /* Fullscreen sections */
 .fullscreen-section {
@@ -54,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: -1;
   }
 
-  .background-image-size1 {
+.background-image-size1 {
     width: 100vw; /* Occupy full width of the container */
     height: 100vh; /* Set the height to 200vh (2 times the viewport height) */
     object-fit: cover; /* Ensure the image covers the entire container, cropping if necessary */
@@ -84,6 +88,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 50%; /* Center the button horizontally */
 
 }
+/* ---------------Heading------------ */
 /* Sticky logo */
 .sticky-logo {
   position: fixed;
@@ -129,6 +134,13 @@ h1, h2, h3, h4, h5, h6 {
     background-color:rgb(245,223,173,.4); /* Set the background color with 50% opacity */
     padding: 15px; /* Add padding */
     animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
+}
+
+#rsvp {
+  position: absolute; /* Position the RSVP section absolute */
+  bottom: 50%; /* Align the bottom of the RSVP section to the middle of the home section */
+  left: 50%; /* Align the left side of the RSVP section to the middle of the home section */
+  transform: translate(-50%, 50%); /* Center the RSVP section horizontally and vertically */
 }
 
 /* Background image */
@@ -219,14 +231,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #842717; /* Adjust color as needed */
 }
 
-/* Half image section */
-.half-image-section {
-  display: flex;
-}
 
-.half-image-section img {
-  width: 100vw;
-}
 
 /* --------------FAQ Section-------------- */
 .faq-container {
@@ -234,9 +239,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px; /* Add padding */
     max-width: 400px; /* Set maximum width */
     margin: 0 auto; /* Center horizontally */
-    position: relative;
-    margin-top: -10px; /* Add margin */
     z-index: 4;
+    text-align: center;
 }
 
 /* FAQ item styling */

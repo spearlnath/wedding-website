@@ -31,6 +31,7 @@ window.addEventListener('scroll', function() {
     });
 });
 
+//------------------FAQ- section------------------------
 // Toggle for FAQ items
 
 const toggles = document.querySelectorAll('.toggle');
@@ -50,6 +51,29 @@ toggles.forEach(toggle => {
     });
 });
 
+// JavaScript
+let lastScrollY = window.scrollY; // Initialize lastScrollY variable with current scroll position
+
+document.addEventListener("scroll", function() {
+    const faqSection = document.getElementById("faq");
+    const imageSection = document.getElementById("image2"); // Change this to target the image2 element
+    const imageHeight = imageSection.offsetHeight;
+    const scrollY = window.scrollY;
+
+    // Calculate the desired translateY value
+    let translateY = 0; // Default to 5%
+
+    // Check if the scroll position is below the top of the image section
+    if (scrollY > imageSection.offsetTop) {
+        // Calculate the percentage of scroll progress relative to the image section
+        let scrollProgress = (scrollY - imageSection.offsetTop) / (imageHeight / 2);
+        // Adjust the translateY value accordingly
+        translateY = Math.min(50, Math.max(0, (scrollProgress * 45))); // 5% to 50%
+    }
+
+    // Apply the translateY value to the faqSection
+    faqSection.style.transform = `translateY(-${translateY}%)`;
+});
 
 //Sticky Menu
 // JavaScript
@@ -91,6 +115,20 @@ menu.addEventListener('mouseleave', function() {
 window.addEventListener('scroll', function() {
     updateHeaderPosition();
 });
+
+// JavaScript
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1); // Get the target section ID
+      const targetSection = document.getElementById(targetId); // Get the target section element
+      const offsetTop = targetSection.offsetTop; // Get the offset from the top of the document to the target section
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth' // Smooth scrolling behavior
+      });
+    });
+  });
 
 //RSVP Button
 
