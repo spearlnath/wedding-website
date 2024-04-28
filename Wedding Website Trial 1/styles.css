@@ -19,6 +19,31 @@ body {
     overflow: hidden; /* Hide overflow content */
 }
 
+.image-container-vert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container-vert img {
+    width: 20%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Optional spacing between images */
+}
+
+.image-container-hori {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container-hori img {
+    width: 20%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Optional spacing between images */
+}
+
 /* Fullscreen image styling */
 .fullscreen-image {
     width: 100vw; /* Occupy full viewport width */
@@ -185,6 +210,11 @@ a {
 
 .couple-photo {
     width: 100%; /* Make the image fill the width of its container */
+}
+
+.couple-rug {
+    max-width: 20%;
+    height: auto;
 }
 
 /* Section heading styling */
