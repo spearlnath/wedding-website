@@ -147,11 +147,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const scrolledPercentage = (scrollPosition / imageHeight) * 100;
 
         // Adjust the visibility of the RSVP button based on scroll position
-        if (scrolledPercentage >= 15 && scrolledPercentage <= 60) {
+        if (scrolledPercentage >= 10 && scrolledPercentage <= 60) {
             rsvpButton.classList.add("sticky", "fadeIn");
             rsvpButton.classList.remove("fadeOut");
         } else {
-            rsvpButton.classList.remove("fadeIn");
+            rsvpButton.classList.remove("sticky","fadeIn");
             rsvpButton.classList.add("fadeOut");
         }
     });
