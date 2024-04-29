@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   width: 100vw; /* Make the container fill the viewport width */
   height: auto; /* Make the container fill the viewport height */
-  overflow: hidden; /* Hide overflow content */
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,7 +86,6 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     bottom: 50%; /* Center the button vertically */
     left: 50%; /* Center the button horizontally */
-
 }
 /* ---------------Heading------------ */
 /* Sticky logo */
@@ -107,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   right:0;
   z-index: 4; /* Ensure the indicator is above other content */
-
+  font-family: "Lora", serif;
   padding: 10px 20px; /* Add padding */
   margin: 0; /* Remove any margin */
   display: flex; /* Use flexbox for layout */
@@ -137,10 +136,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #rsvp {
-  position: absolute; /* Position the RSVP section absolute */
-  bottom: 50%; /* Align the bottom of the RSVP section to the middle of the home section */
-  left: 50%; /* Align the left side of the RSVP section to the middle of the home section */
-  transform: translate(-50%, 50%); /* Center the RSVP section horizontally and vertically */
+  position: absolute;
+  bottom: 50%; /* Adjust this value as needed */
+  left: 0;
+  width: 100%;
+  z-index: 4; /* Ensure the RSVP section appears on top of the background image */
 }
 
 /* Background image */
@@ -195,13 +195,217 @@ h1, h2, h3, h4, h5, h6 {
         opacity: 0; /* Fade in to full opacity */
     }
 }
+/*~~~~~~~~~~~~Fonts~~~~~~~~~~~~~~~~~~~~*/
 .overlay h1 {
-  font-size: 3em;
+  font-size: 6em;
+  font-family: "Aboreto", system-ui;
 }
 
-.overlay p {
+.overlay p,h2,h3,h4 {
+  font-family: "Lora", serif;
   font-size: 1.5em;
 }
+h1 {
+  font-family: "Aboreto", system-ui;
+
+}
+h2,h3,h4 {
+  font-family: "Lora", serif;
+}
+p {
+  font-family: "Trirong", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.aboreto-regular {
+  font-family: "Aboreto", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 100 to 900 */
+
+.trirong-thin {
+  font-family: "Trirong", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.trirong-extralight {
+  font-family: "Trirong", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.trirong-light {
+  font-family: "Trirong", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.trirong-regular {
+  font-family: "Trirong", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.trirong-medium {
+  font-family: "Trirong", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.trirong-semibold {
+  font-family: "Trirong", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.trirong-bold {
+  font-family: "Trirong", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.trirong-extrabold {
+  font-family: "Trirong", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.trirong-black {
+  font-family: "Trirong", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.trirong-thin-italic {
+  font-family: "Trirong", serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.trirong-extralight-italic {
+  font-family: "Trirong", serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.trirong-light-italic {
+  font-family: "Trirong", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.trirong-regular-italic {
+  font-family: "Trirong", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.trirong-medium-italic {
+  font-family: "Trirong", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.trirong-semibold-italic {
+  font-family: "Trirong", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.trirong-bold-italic {
+  font-family: "Trirong", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.trirong-extrabold-italic {
+  font-family: "Trirong", serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.trirong-black-italic {
+  font-family: "Trirong", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 400 to 700 */
+/* Lora */
+.lora-italic-regular> {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+
+  font-style: italic;
+}
+
+/* Comorant */
+.cormorant-infant-light {
+  font-family: "Cormorant Infant", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.cormorant-infant-regular {
+  font-family: "Cormorant Infant", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cormorant-infant-medium {
+  font-family: "Cormorant Infant", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.cormorant-infant-semibold {
+  font-family: "Cormorant Infant", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.cormorant-infant-bold {
+  font-family: "Cormorant Infant", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cormorant-infant-light-italic {
+  font-family: "Cormorant Infant", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.cormorant-infant-regular-italic {
+  font-family: "Cormorant Infant", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.cormorant-infant-medium-italic {
+  font-family: "Cormorant Infant", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.cormorant-infant-semibold-italic {
+  font-family: "Cormorant Infant", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.cormorant-infant-bold-italic {
+  font-family: "Cormorant Infant", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/*------------BIG DAY------------------*/
 #big-day h1 {
     display: block;
     text-align: center;
