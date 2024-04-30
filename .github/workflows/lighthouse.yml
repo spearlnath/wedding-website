@@ -1,0 +1,23 @@
+# Name of the workflow
+name: Lighthouse Tests
+
+# Specifies when to trigger the workflow
+on:
+  push: # Triggered on push events
+    branches: # Specify the branches to trigger the workflow on
+      - main # Triggered when changes are pushed to the main branch
+
+# Defines the jobs to be executed in this workflow
+jobs:
+  lighthouse-test: # Name of the job
+    runs-on: ubuntu-latest # Specifies the operating system to run the job on
+
+    steps: # Defines the steps to be executed in the job
+    - name: Checkout Repository # Name of the step
+      uses: actions/checkout@v2 # Action to checkout the repository
+
+    - name: Install Dependencies # Name of the step
+      run: npm install # Command to install project dependencies
+
+    - name: Run Lighthouse Tests # Name of the step
+      run: npm run lighthouse-test # Command to run Lighthouse tests
