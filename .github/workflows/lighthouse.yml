@@ -20,4 +20,4 @@ jobs:
       run: npm install # Command to install project dependencies
 
     - name: Run Lighthouse Tests # Name of the step
-      run: npm run ../../tests/lighthouse-test # Command to run Lighthouse tests
+      run: npm run ../../tests/lighthouse-test.js # Command to run Lighthouse tests
