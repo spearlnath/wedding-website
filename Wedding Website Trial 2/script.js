@@ -1,14 +1,23 @@
 // Cloud animations
-window.addEventListener('scroll', function() {
-    const clouds = document.querySelectorAll('.cloud');
-    const scrollPosition = window.pageYOffset;
-    
-    clouds.forEach(function(cloud) {
-        const cloudOffset = cloud.offsetTop;
-        const distance = (scrollPosition - cloudOffset) * 0.2;
-        
-        cloud.style.transform = 'translateX(' + distance + 'px)';
+let lastScrollY = window.scrollY;
+
+document.addEventListener("scroll", function() {
+    const deltaY = window.scrollY - lastScrollY;
+    const header = document.getElementById("header");
+    const plane = document.querySelector(".plane");
+    const clouds = document.querySelectorAll(".cloud");
+
+    // Get the initial left position of the plane element
+    const initialLeft = parseInt(window.getComputedStyle(plane).left) || 0;
+
+    // Move plane and clouds to the right when scrolling down
+    plane.style.left = `${initialLeft + deltaY}px`;
+    clouds.forEach(cloud => {
+        const initialRight = parseInt(window.getComputedStyle(cloud).right) || 0;
+        cloud.style.right = `${initialRight - deltaY}px`;
     });
+
+    lastScrollY = window.scrollY;
 });
 
 // Sticky menu with section indicator
@@ -52,8 +61,6 @@ toggles.forEach(toggle => {
 });
 
 // JavaScript
-let lastScrollY = window.scrollY; // Initialize lastScrollY variable with current scroll position
-
 document.addEventListener("scroll", function() {
     const faqSection = document.getElementById("faq");
     const imageSection = document.getElementById("image2"); // Change this to target the image2 element
@@ -147,12 +154,37 @@ document.addEventListener("DOMContentLoaded", function() {
         const scrolledPercentage = (scrollPosition / imageHeight) * 100;
 
         // Adjust the visibility of the RSVP button based on scroll position
-        if (scrolledPercentage >= 10 && scrolledPercentage <= 60) {
+        if (scrolledPercentage >= 35 && scrolledPercentage <= 60) {
             rsvpButton.classList.add("sticky", "fadeIn");
             rsvpButton.classList.remove("fadeOut");
         } else {
             rsvpButton.classList.remove("sticky","fadeIn");
             rsvpButton.classList.add("fadeOut");
+        }
+    });
+});
+
+//------------Sections--------------
+window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('.section, .faq-container, .last-section, .overlay, .background-image-size1, .fullscreen-section');
+
+
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionBottom = section.getBoundingClientRect().bottom;
+        const windowHeight = window.innerHeight;
+        const sectionHeight = section.clientHeight;
+
+        // Calculate the percentage of the section visible in the window
+        const visiblePercentage = (Math.min(sectionBottom, windowHeight) - Math.max(sectionTop, 0)) / sectionHeight;
+
+        // Add fadeIn class when a certain percentage of the section is visible
+        if (visiblePercentage >= 0.05) {
+            section.classList.add('fadeIn');
+            section.classList.remove('fadeOut'); // Remove fadeOut class if present
+        } else {
+            section.classList.remove('fadeIn'); // Remove fadeIn class if present
+            section.classList.add('fadeOut');
         }
     });
 });

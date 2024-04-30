@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <header id="header" class="hidden">
+    <header id="header" class="fixed-header">
 
         <!-- Sticky logo -->
         <div class="sticky-logo">
@@ -30,6 +30,7 @@
         </nav>
 
 
+
     </header>
 
 
@@ -37,15 +38,26 @@
   <section id="home" class="fullscreen-section">
     <div class="background-image">
       <img src="assets/home_coupleimage.png" alt="Wedding Image">
-      <div class="overlay">
-        <h1>SHARON & BRANDON</h1>
-        <p class="wedding-date">June 15, 2024</p>
-      </div>
-      <section id="rsvp">
-        <!-- RSVP button -->
-        <button id="rsvpButton" class="rsvp-button">RSVP</button>
-      </section>
     </div>
+
+    <img src="assets/home_coupleimage_transparent_layer.png" class="overlay" alt="Wedding Image Layer">
+      
+    <div class="overlay">
+      <h1>SHARON & BRANDON</h1>
+      <p class="wedding-date">June 15, 2024</p>
+    </div>
+      <section id="rsvp" class="section">
+      <!-- RSVP button -->
+      <button id="rsvpButton" class="rsvp-button">RSVP</button>
+    </section>
+
+    <div class="scrolling-images">
+      <img src="assets/airplane.png" class="plane" alt="Plane">
+      <img src="assets/cloud_2.png" class="cloud" alt="Cloud 1">
+      <img src="assets/cloud_1.png" class="cloud" alt="Cloud 2">
+      <img src="assets/cloud_3.png" class="cloud" alt="Cloud 3">
+    </div>
+    
   </section>
 
 
