@@ -14,10 +14,10 @@ jobs:
 
     steps: # Defines the steps to be executed in the job
     - name: Checkout Repository # Name of the step
-      uses: actions/checkout@v2 # Action to checkout the repository
+      uses: actions/checkout@v4 # Action to checkout the repository
 
     - name: Install Dependencies # Name of the step
       run: npm install # Command to install project dependencies
 
     - name: Run Lighthouse Tests # Name of the step
-      run: npm run lighthouse-test # Command to run Lighthouse tests
+      run: npm run ../../tests/lighthouse-test # Command to run Lighthouse tests
