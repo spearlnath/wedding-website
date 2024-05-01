@@ -4,19 +4,13 @@
 /* <uniquifier>: Use a unique and descriptive class name */
 /* <weight>: Use a value from 200 to 800 */
 
-.changa-style {
-    font-family: "Changa", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
 
 /* General styling */
 body, html {
     margin: 0;
     padding: 0;
     background-color: #f5dfad; /* Set the background color */
-    font-family:  "Changa", sans-serif; /* Default font family */
+    font-family: "Italiana", sans-serif;
     font-weight: 400;
     font-style: normal;
     overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -30,10 +24,16 @@ body, html {
 }
 
 /* Heading Font */
-h1, h2, h3, h4, h5, h6 {
-    font-family:  "Changa", sans-serif; /* Set heading font family */
-    font-weight: 400;
-    font-style: normal;
+h1, h2, h4, h5, h6 {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 3em;
+}
+h3 {
+  font-family: "Italiana", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 /*-----------HEADER-----------------*/
 .fixed-header {
@@ -148,7 +148,11 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   right:0;
   z-index: 9999; /* Ensure the indicator is above other content */
-  font-family: "Lora", serif;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 1.5em;
+  font-style: normal;
   padding: 10px 20px; /* Add padding */
   margin: 0; /* Remove any margin */
   display: flex; /* Use flexbox for layout */
@@ -237,211 +241,86 @@ h1, h2, h3, h4, h5, h6 {
 /*~~~~~~~~~~~~Fonts~~~~~~~~~~~~~~~~~~~~*/
 .overlay h1 {
   font-size: 6em;
-  font-family: "Aboreto", system-ui;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .overlay p,h2,h3,h4 {
-  font-family: "Lora", serif;
-  font-size: 1.5em;
+  font-family: "Italiana", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 h1 {
-  font-family: "Aboreto", system-ui;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 
 }
-h2,h3,h4 {
-  font-family: "Lora", serif;
+h2,h4 {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+h3 {
+  font-family: "Italiana", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 p {
-  font-family: "Trirong", serif;
-  font-weight: 300;
-  font-style: normal;
-}
-.aboreto-regular {
-  font-family: "Aboreto", system-ui;
+  font-family: "Italiana", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-/* <uniquifier>: Use a unique and descriptive class name */
-/* <weight>: Use a value from 100 to 900 */
-
-.trirong-thin {
-  font-family: "Trirong", serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.trirong-extralight {
-  font-family: "Trirong", serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.trirong-light {
-  font-family: "Trirong", serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.trirong-regular {
-  font-family: "Trirong", serif;
+.italiana-regular {
+  font-family: "Italiana", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.trirong-medium {
-  font-family: "Trirong", serif;
-  font-weight: 500;
-  font-style: normal;
-}
 
-.trirong-semibold {
-  font-family: "Trirong", serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.trirong-bold {
-  font-family: "Trirong", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.trirong-extrabold {
-  font-family: "Trirong", serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.trirong-black {
-  font-family: "Trirong", serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.trirong-thin-italic {
-  font-family: "Trirong", serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.trirong-extralight-italic {
-  font-family: "Trirong", serif;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.trirong-light-italic {
-  font-family: "Trirong", serif;
+.maitree-light {
+  font-family: "Maitree", serif;
   font-weight: 300;
-  font-style: italic;
+  font-style: normal;
 }
 
-.trirong-regular-italic {
-  font-family: "Trirong", serif;
+.maitree-regular {
+  font-family: "Maitree", serif;
   font-weight: 400;
-  font-style: italic;
-}
-
-.trirong-medium-italic {
-  font-family: "Trirong", serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.trirong-semibold-italic {
-  font-family: "Trirong", serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.trirong-bold-italic {
-  font-family: "Trirong", serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.trirong-extrabold-italic {
-  font-family: "Trirong", serif;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.trirong-black-italic {
-  font-family: "Trirong", serif;
-  font-weight: 900;
-  font-style: italic;
+  font-style: normal;
 }
 
 /* <uniquifier>: Use a unique and descriptive class name */
 /* <weight>: Use a value from 400 to 700 */
-/* Lora */
-.lora-italic-regular> {
-  font-family: "Lora", serif;
+
+.caveat-regular {
+  font-family: "Caveat", cursive;
   font-optical-sizing: auto;
-
-  font-style: italic;
-}
-
-/* Comorant */
-.cormorant-infant-light {
-  font-family: "Cormorant Infant", serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.cormorant-infant-regular {
-  font-family: "Cormorant Infant", serif;
   font-weight: 400;
   font-style: normal;
 }
-
-.cormorant-infant-medium {
-  font-family: "Cormorant Infant", serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.cormorant-infant-semibold {
-  font-family: "Cormorant Infant", serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.cormorant-infant-bold {
-  font-family: "Cormorant Infant", serif;
+.caveat-bold {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
 }
 
-.cormorant-infant-light-italic {
-  font-family: "Cormorant Infant", serif;
+.kalam-light {
+  font-family: "Kalam", cursive;
   font-weight: 300;
-  font-style: italic;
+  font-style: normal;
 }
 
-.cormorant-infant-regular-italic {
-  font-family: "Cormorant Infant", serif;
+.kalam-regular {
+  font-family: "Kalam", cursive;
   font-weight: 400;
-  font-style: italic;
-}
-
-.cormorant-infant-medium-italic {
-  font-family: "Cormorant Infant", serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.cormorant-infant-semibold-italic {
-  font-family: "Cormorant Infant", serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.cormorant-infant-bold-italic {
-  font-family: "Cormorant Infant", serif;
-  font-weight: 700;
-  font-style: italic;
+  font-style: normal;
 }
 
 /*------------BIG DAY------------------*/
