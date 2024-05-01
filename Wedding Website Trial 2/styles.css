@@ -10,8 +10,8 @@ body, html {
     margin: 0;
     padding: 0;
     background-color: #f5dfad; /* Set the background color */
-    font-family: "Italiana", sans-serif;
-    font-weight: 400;
+    font-family: "Taviraj", serif;
+    font-weight: 200;
     font-style: normal;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     
@@ -25,14 +25,14 @@ body, html {
 
 /* Heading Font */
 h1, h2, h4, h5, h6 {
-  font-family: "Caveat", cursive;
-  font-optical-sizing: auto;
+  font-family: "Allura", cursive;
   font-weight: 400;
-  font-size: 3em;
+  font-style: normal;
+  font-size: 3.5em;
 }
 h3 {
-  font-family: "Italiana", sans-serif;
-  font-weight: 400;
+  font-family: "Taviraj", serif;
+  font-weight: 200;
   font-style: normal;
 }
 /*-----------HEADER-----------------*/
@@ -148,9 +148,9 @@ h3 {
   top: 0;
   right:0;
   z-index: 9999; /* Ensure the indicator is above other content */
-  font-family: "Caveat", cursive;
-  font-optical-sizing: auto;
+  font-family: "Allura", cursive;
   font-weight: 400;
+  font-style: normal;
   font-size: 1.5em;
   font-style: normal;
   padding: 10px 20px; /* Add padding */
@@ -241,38 +241,51 @@ h3 {
 /*~~~~~~~~~~~~Fonts~~~~~~~~~~~~~~~~~~~~*/
 .overlay h1 {
   font-size: 6em;
-  font-family: "Caveat", cursive;
-  font-optical-sizing: auto;
-  font-weight: 700;
+  font-family: "Taviraj", serif;
+  font-weight: 300;
   font-style: normal;
 }
 
 .overlay p,h2,h3,h4 {
-  font-family: "Italiana", sans-serif;
-  font-weight: 400;
+  font-family: "Taviraj", serif;
+  font-weight: 200;
   font-style: normal;
 }
 h1 {
-  font-family: "Caveat", cursive;
-  font-optical-sizing: auto;
-  font-weight: 700;
+  font-family: "Taviraj", serif;
+  font-weight: 300;
   font-style: normal;
 
 }
 h2,h4 {
-  font-family: "Caveat", cursive;
-  font-optical-sizing: auto;
+  font-family: "Allura", cursive;
   font-weight: 400;
   font-style: normal;
 }
 h3 {
-  font-family: "Italiana", sans-serif;
-  font-weight: 400;
+  font-family: "Taviraj", serif;
+  font-weight: 200;
   font-style: normal;
 }
 p {
-  font-family: "Italiana", sans-serif;
+  font-family: "Taviraj", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.allura-regular {
+  font-family: "Allura", cursive;
   font-weight: 400;
+  font-style: normal;
+}
+.taviraj-extralight {
+  font-family: "Taviraj", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+.taviraj-light {
+  font-family: "Taviraj", serif;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -371,17 +384,23 @@ p {
 /* --------------FAQ Section-------------- */
 .faq-container {
     background-color: #e0f2f1; /* Set background color */
-    padding: 20px; /* Add padding */
+    padding: 25px; /* Add padding */
     max-width: 400px; /* Set maximum width */
     margin: 0 auto; /* Center horizontally */
     z-index: 4;
     text-align: center;
 }
 
+/* Reduce margin for h2 within .faq-container */
+.faq-container h2 {
+  margin: 10px 0; /* Adjust margin as needed */
+}
+z
 /* FAQ item styling */
 .faq-item {
     margin-bottom: 20px; /* Add margin */
 }
+
 /* Answer styling */
 .answer {
     display: none; /* Hide answer by default */
