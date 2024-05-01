@@ -1,11 +1,11 @@
 {
     "name": "lighthouse-tests",
     "version": "1.0.0",
+    "type": "module",
     "scripts": {
-      "test": "node tests/lighthouse-test.js"
+        "test": "node tests/lighthouse-test.js"
     },
-    "dependencies": {
-      "lighthouse": "^8.0.0"
+    "devDependencies": {
+        "lighthouse": "^12.0.0"
     }
-  }
-  
+}
