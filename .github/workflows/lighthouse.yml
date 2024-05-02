@@ -16,8 +16,8 @@ jobs:
     - name: Checkout Repository # Name of the step
       uses: actions/checkout@v4 # Action to checkout the repository
 
-    - name: Install Dependencies # Name of the step
-      run: npm install # Command to install project dependencies
-
-    - name: Run Lighthouse Tests # Name of the step
-      run: npm run tests/lighthouse-test.js # Command to run Lighthouse tests
+    - name: Run Lighthouse CI
+      uses: treosh/lighthouse-ci-action@v2
+      with:
+        configPath: "./lighthouserc.json"
+        temporaryPublicStorage: true
