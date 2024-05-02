@@ -25,7 +25,8 @@ body, html {
 
 /* Heading Font */
 h1, h2, h4, h5, h6 {
-  font-family: "Allura", cursive;
+  font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-size: 3.5em;
@@ -53,7 +54,7 @@ h3 {
   position: relative;
   width: 100vw;
   height: auto;
-  
+  overflow: hidden;
   /* Remove or adjust other styles as needed */
 }
 
@@ -76,12 +77,11 @@ h3 {
 .scrolling-images {
   position: absolute;
   /* Adjust positioning as needed */
-  top: 30%; /* Example value */
-  left: 10%; /* Example value */
-  right: 10%; /* Example value */
+  top: 0%; /* Example value */
   width: 100vw;
   height: 50vh;
   z-index: 2; /* Ensure images are above other content */
+
 }
 
 /* Adjust image styles as needed */
@@ -90,26 +90,29 @@ h3 {
   width: 20%; /* Fixed width */
   height: auto; /* Maintain aspect ratio */
   z-index: 2;
-}
-/* Positioning for specific images */
-.plane {
-  left: 10%; /* Adjust left position percentage for the plane */
-  top: -30%; /* Adjust top position percentage for the plane */
+
 }
 
-.cloud:nth-of-type(1) { /* Left Cloud */
-  right: 10%; /* Adjust right position percentage for cloud 1 */
-  top: -10%; /* Adjust top position percentage for cloud 1 */
+
+/* Positioning for specific images */
+.plane {
+  left: 20%; /* Adjust left position percentage for the plane */
+  top: 40%; /* Adjust top position percentage for the plane */
+}
+
+.cloud { /* Left Cloud */
+  right: 75%; /* Adjust right position percentage for cloud 1 */
+  top: 85%; /* Adjust top position percentage for cloud 1 */
 }
 
 .cloud:nth-of-type(2) { /* Right Cloud */
   right: 10%; /* Adjust right position percentage for cloud 2 */
-  top: -10%; /* Adjust top position percentage for cloud 2 */
+  top: 63%; /* Adjust top position percentage for cloud 2 */
 }
 
 .cloud:nth-of-type(3) { /* Top Center Cloud */
-  right: 40%; /* Adjust right position percentage for cloud 3 */
-  top: -47%; /* Adjust top position percentage for cloud 3 */
+  right: 35%; /* Adjust right position percentage for cloud 3 */
+  top: 10%; /* Adjust top position percentage for cloud 3 */
 }
 
 .hidden {
@@ -148,11 +151,11 @@ h3 {
   top: 0;
   right:0;
   z-index: 9999; /* Ensure the indicator is above other content */
-  font-family: "Allura", cursive;
+  font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.5em;
-  font-style: normal;
+  font-size: 1.2em;
   padding: 10px 20px; /* Add padding */
   margin: 0; /* Remove any margin */
   display: flex; /* Use flexbox for layout */
@@ -196,17 +199,9 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  overflow: hidden; /* Hide any content that overflows the overlay */
+  width: fit-content; /* Adjust width as needed */
   animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
   z-index: 11;
-}
-.overlay h1 {
-  text-align: center;
-  color: white;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-size: 1.3vw; /* Adjust font size relative to viewport width */
 }
 .overlay img {
   width: 100%;
@@ -214,6 +209,34 @@ h3 {
   object-fit: cover;
   z-index: 10;
 }
+.overlay-text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content; /* Adjust width as needed */
+  margin: 50px auto; /* Center the container */
+  animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
+  z-index: 10;
+}
+.angled-text-container {
+  color: white;
+  position: relative;
+  width: fit-content; /* Adjust width as needed */
+  transform: rotate(-10deg); /* Adjust rotation angle as needed */
+  text-align: center; /* Center the text horizontally */
+}
+.angled-letter {
+  display: inline-block;
+  transform: rotate(4deg); /* Counter-rotate each letter to keep them straight */
+  margin-right: 2px; /* Adjust spacing between letters as needed */
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 7em;
+  line-height: .7;
+}
+
 
 .fadeIn {
   animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
@@ -258,7 +281,8 @@ h1 {
 
 }
 h2,h4 {
-  font-family: "Allura", cursive;
+  font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
@@ -272,6 +296,16 @@ p {
   font-weight: 200;
   font-style: normal;
 }
+
+/* Use a unique and descriptive class name */
+
+.cormorant-norm {
+  font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 .allura-regular {
   font-family: "Allura", cursive;

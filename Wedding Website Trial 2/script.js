@@ -1,24 +1,51 @@
+
+
 // Cloud animations
 let lastScrollY = window.scrollY;
 
 document.addEventListener("scroll", function() {
     const deltaY = window.scrollY - lastScrollY;
-    const header = document.getElementById("header");
     const plane = document.querySelector(".plane");
     const clouds = document.querySelectorAll(".cloud");
 
     // Get the initial left position of the plane element
-    const initialLeft = parseInt(window.getComputedStyle(plane).left) || 0;
+    const initialLeft = parseFloat(window.getComputedStyle(plane).left) || 0;
 
     // Move plane and clouds to the right when scrolling down
     plane.style.left = `${initialLeft + deltaY}px`;
     clouds.forEach(cloud => {
-        const initialRight = parseInt(window.getComputedStyle(cloud).right) || 0;
+        const initialRight = parseFloat(window.getComputedStyle(cloud).right) || 0;
         cloud.style.right = `${initialRight - deltaY}px`;
     });
 
     lastScrollY = window.scrollY;
 });
+
+window.addEventListener("resize", function() {
+    adjustPositionsToPercentage();
+});
+
+
+// Function to adjust positions to percentages
+function adjustPositionsToPercentage() {
+    const containerWidth = document.querySelector(".scrolling-images").offsetWidth;
+
+    const plane = document.querySelector(".plane");
+    const initialPlaneLeft = parseFloat(window.getComputedStyle(plane).left) || 0;
+    const planePercentage = (initialPlaneLeft / containerWidth) * 100;
+    plane.style.left = `${planePercentage}%`;
+
+    const clouds = document.querySelectorAll(".cloud");
+    clouds.forEach(cloud => {
+        const initialCloudRight = parseFloat(window.getComputedStyle(cloud).right) || 0;
+        const cloudPercentage = (initialCloudRight / containerWidth) * 100;
+        cloud.style.right = `${cloudPercentage}%`;
+    });
+}
+
+// Call the function initially to adjust positions to percentages
+adjustPositionsToPercentage();
+
 
 // Sticky menu with section indicator
 window.addEventListener('scroll', function() {
@@ -166,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //------------Sections--------------
 window.addEventListener('scroll', function() {
-    const sections = document.querySelectorAll('.section, .faq-container, .last-section, .overlay, .background-image-size1, .fullscreen-section');
+    const sections = document.querySelectorAll('.section, .faq-container');
 
 
     sections.forEach(section => {
