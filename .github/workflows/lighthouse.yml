@@ -6,7 +6,7 @@ on:
   push: # Triggered on push events
     branches: # Specify the branches to trigger the workflow on
       - main # Triggered when changes are pushed to the main branch
-
+      - feature/sharon # Triggered when changes are pushed to the main branch
 # Defines the jobs to be executed in this workflow
 jobs:
   lighthouse-test: # Name of the job
