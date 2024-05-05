@@ -27,12 +27,43 @@ function updatePositions() {
 updatePositions();
 
 // Update positions on scroll
-window.addEventListener('scroll', updatePositions);
+window.addEventListener('scroll', () => {
+    const scrollingImages = document.querySelector('.scrolling-images');
+    const scrollPosition = window.scrollY;
+    // Get the bounding rectangle of scrolling-images
+    const scrollingImagesRect = scrollingImages.getBoundingClientRect();
+
+    // Calculate the offset between the top of the page and the top of scrolling images
+    const scrollingImagesOffset = scrollingImagesRect.top + scrollPosition;
+
+    // Calculate the position of scrolling images relative to the top of the page
+    const scrollingImagesPosition = scrollingImagesOffset + scrollingImagesRect.height;
+
+      if (scrollPosition<= scrollingImagesPosition){
+          updatePositions();
+      }
+
+});
+
 
 // Update positions on window resize
 window.addEventListener('resize', () => {
+    const scrollPosition = window.scrollY;
+    const scrollingImages = document.querySelector('.scrolling-images');
+
+    const scrollingImagesRect = scrollingImages.getBoundingClientRect();
+
+    // Calculate the offset between the top of the page and the top of scrolling images
+    const scrollingImagesOffset = scrollingImagesRect.top + scrollPosition;
+
+    // Calculate the position of scrolling images relative to the top of the page
+    const scrollingImagesPosition = scrollingImagesOffset + scrollingImagesRect.height;
+
+    if (scrollPosition<= scrollingImagesPosition){
     // Calculate the resizing factor based on the change in window width
     const resizingFactor = window.innerWidth / lastWindowWidth;
+
+
     const clouds = document.querySelectorAll(".cloud");
     const plane =  document.querySelector(".plane");
 
@@ -49,6 +80,47 @@ window.addEventListener('resize', () => {
 
     // Update the last window width
     lastWindowWidth = window.innerWidth;
+} else {
+
+    // Calculate the target percentage distances for the plane and clouds once they are in view
+    const desiredPlaneLeftPercent = 20;
+    const cloud1RightPercentInView = 75;
+    const cloud2RightPercentInView = 10;
+    const cloud3RightPercentInView = 35;
+
+    const clouds = document.querySelectorAll(".cloud");
+    const plane =  document.querySelector(".plane");
+
+    // Account for resizing factor
+    const resizingFactor = window.innerWidth / lastWindowWidth;
+    // Convert pixel values to percentages for clouds and plane
+    // Convert desired percentage to pixels
+    const desiredPlaneLeftPx = (desiredPlaneLeftPercent / 100) * window.innerWidth;
+
+    // Calculate the plane's new position based on the desired percentage and window height
+    plane.style.left = `${desiredPlaneLeftPx + (scrollingImagesRect.height)}px`;
+
+    clouds.forEach(cloud => {
+        const cloudRightPercent = (parseFloat(window.getComputedStyle(cloud).right) / window.innerWidth) * 100;
+        let desiredCloudRightPx;
+        switch (cloud.className) {
+            case 'cloud cloud1':
+                desiredCloudRightPx = (cloud1RightPercentInView/100) * window.innerWidth;
+                break;
+            case 'cloud cloud2':
+                desiredCloudRightPx = (cloud2RightPercentInView/100) * window.innerWidth;
+                break;
+            case 'cloud cloud3':
+                desiredCloudRightPx = (cloud3RightPercentInView/100) * window.innerWidth;
+                break;
+            default:
+                break;
+        }
+
+        cloud.style.right = `${desiredCloudRightPx-(scrollingImagesRect.height/2)}px`;
+    });
+
+}
 });
 
 
@@ -163,7 +235,14 @@ document.querySelectorAll('nav a').forEach(anchor => {
       e.preventDefault();
       const targetId = this.getAttribute('href').substring(1); // Get the target section ID
       const targetSection = document.getElementById(targetId); // Get the target section element
-      const offsetTop = targetSection.offsetTop; // Get the offset from the top of the document to the target section
+      let offsetTop = 0;
+      if (targetId == "faq"){
+         offsetTop = targetSection.offsetTop-targetSection.offsetHeight; // Get the offset from the top of the document to the target section
+      } else{
+         offsetTop = targetSection.offsetTop; // Get the offset from the top of the document to the target section
+      }
+
+      console.log("target top:",offsetTop);
       window.scrollTo({
         top: offsetTop,
         behavior: 'smooth' // Smooth scrolling behavior
