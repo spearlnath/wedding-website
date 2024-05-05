@@ -10,8 +10,9 @@ body, html {
     margin: 0;
     padding: 0;
     background-color: #f5dfad; /* Set the background color */
-    font-family: "Taviraj", serif;
-    font-weight: 200;
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
     font-style: normal;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     
@@ -25,15 +26,16 @@ body, html {
 
 /* Heading Font */
 h1, h2, h4, h5, h6 {
-  font-family: "Cormorant", serif;
+  font-family: "Cinzel", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-size: 3.5em;
 }
 h3 {
-  font-family: "Taviraj", serif;
-  font-weight: 200;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   font-style: normal;
 }
 /*-----------HEADER-----------------*/
@@ -151,7 +153,7 @@ h3 {
   top: 0;
   right:0;
   z-index: 9999; /* Ensure the indicator is above other content */
-  font-family: "Cormorant", serif;
+  font-family: "Cinzel", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -188,7 +190,7 @@ h3 {
   position: absolute;
   bottom: 50%; /* Adjust this value as needed */
   left: 0;
-  width: 100%;
+  width: 50%;
   z-index: 4; /* Ensure the RSVP section appears on top of the background image */
 }
 
@@ -263,112 +265,65 @@ h3 {
 }
 /*~~~~~~~~~~~~Fonts~~~~~~~~~~~~~~~~~~~~*/
 .overlay h1 {
-  font-size: 6em;
-  font-family: "Taviraj", serif;
-  font-weight: 300;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   font-style: normal;
 }
 
 .overlay p,h2,h3,h4 {
-  font-family: "Taviraj", serif;
-  font-weight: 200;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   font-style: normal;
 }
 h1 {
-  font-family: "Taviraj", serif;
-  font-weight: 300;
+  font-family: "Allura", cursive;
+  font-weight: 400;
   font-style: normal;
 
 }
 h2,h4 {
-  font-family: "Cormorant", serif;
+  font-family: "Cinzel", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 h3 {
-  font-family: "Taviraj", serif;
-  font-weight: 200;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   font-style: normal;
 }
 p {
-  font-family: "Taviraj", serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-/* Use a unique and descriptive class name */
-
-.cormorant-norm {
-  font-family: "Cormorant", serif;
+  font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
+/* Use a unique and descriptive class name */
+
+.cinzel-med {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.eb-garamond-norm {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .allura-regular {
   font-family: "Allura", cursive;
   font-weight: 400;
   font-style: normal;
 }
-.taviraj-extralight {
-  font-family: "Taviraj", serif;
-  font-weight: 200;
-  font-style: normal;
-}
-.taviraj-light {
-  font-family: "Taviraj", serif;
-  font-weight: 300;
-  font-style: normal;
-}
 
-.italiana-regular {
-  font-family: "Italiana", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-.maitree-light {
-  font-family: "Maitree", serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.maitree-regular {
-  font-family: "Maitree", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* <uniquifier>: Use a unique and descriptive class name */
-/* <weight>: Use a value from 400 to 700 */
-
-.caveat-regular {
-  font-family: "Caveat", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-.caveat-bold {
-  font-family: "Caveat", cursive;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.kalam-light {
-  font-family: "Kalam", cursive;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.kalam-regular {
-  font-family: "Kalam", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
 
 /*------------BIG DAY------------------*/
 #big-day h1 {
@@ -417,9 +372,11 @@ p {
 
 /* --------------FAQ Section-------------- */
 .faq-container {
+
+    align-items: center; /* Vertically center */
     background-color: #e0f2f1; /* Set background color */
-    padding: 25px; /* Add padding */
-    max-width: 400px; /* Set maximum width */
+    padding: 20px; /* Add padding */
+    max-width: 370px; /* Set maximum width */
     margin: 0 auto; /* Center horizontally */
     z-index: 4;
     text-align: center;
