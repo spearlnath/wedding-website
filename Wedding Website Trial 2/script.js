@@ -1,52 +1,59 @@
+let lastScrollY = 0;
+let lastWindowWidth = window.innerWidth;
 
-
-// Cloud animations
-let lastScrollY = window.scrollY;
-
-document.addEventListener("scroll", function() {
+function updatePositions() {
     const deltaY = window.scrollY - lastScrollY;
+    const windowWidth = window.innerWidth;
+
     const plane = document.querySelector(".plane");
     const clouds = document.querySelectorAll(".cloud");
 
-    // Get the initial left position of the plane element
-    const initialLeft = parseFloat(window.getComputedStyle(plane).left) || 0;
+    // Move the plane to the right based on scroll
+    const planeLeft = parseFloat(window.getComputedStyle(plane).left);
+    plane.style.left = `${planeLeft + deltaY}px`;
 
-    // Move plane and clouds to the right when scrolling down
-    plane.style.left = `${initialLeft + deltaY}px`;
+    // Move the clouds to the right based on scroll
     clouds.forEach(cloud => {
-        const initialRight = parseFloat(window.getComputedStyle(cloud).right) || 0;
-        cloud.style.right = `${initialRight - deltaY}px`;
+        const cloudRight = parseFloat(window.getComputedStyle(cloud).right);
+        const newRight = cloudRight - deltaY * 0.5; // Adjust the speed of cloud movement if needed
+        cloud.style.right = `${newRight}px`;
     });
 
     lastScrollY = window.scrollY;
-});
-
-window.addEventListener("resize", function() {
-    adjustPositionsToPercentage();
-});
-
-
-// Function to adjust positions to percentages
-function adjustPositionsToPercentage() {
-    const containerWidth = document.querySelector(".scrolling-images").offsetWidth;
-
-    const plane = document.querySelector(".plane");
-    const initialPlaneLeft = parseFloat(window.getComputedStyle(plane).left) || 0;
-    const planePercentage = (initialPlaneLeft / containerWidth) * 100;
-    plane.style.left = `${planePercentage}%`;
-
-    const clouds = document.querySelectorAll(".cloud");
-    clouds.forEach(cloud => {
-        const initialCloudRight = parseFloat(window.getComputedStyle(cloud).right) || 0;
-        const cloudPercentage = (initialCloudRight / containerWidth) * 100;
-        cloud.style.right = `${cloudPercentage}%`;
-    });
+    lastWindowWidth = windowWidth;
 }
 
-// Call the function initially to adjust positions to percentages
-adjustPositionsToPercentage();
+// Initial update
+updatePositions();
+
+// Update positions on scroll
+window.addEventListener('scroll', updatePositions);
+
+// Update positions on window resize
+window.addEventListener('resize', () => {
+    // Calculate the resizing factor based on the change in window width
+    const resizingFactor = window.innerWidth / lastWindowWidth;
+    const clouds = document.querySelectorAll(".cloud");
+    const plane =  document.querySelector(".plane");
+
+    const planeLeft = parseFloat(window.getComputedStyle(plane).left);
+    const newLeft = planeLeft * resizingFactor;
+    plane.style.left = `${newLeft}px`;
+
+    // Update cloud positions based on the resizing factor
+    clouds.forEach(cloud => {
+        const cloudRight = parseFloat(window.getComputedStyle(cloud).right);
+        const newRight = cloudRight * resizingFactor;
+        cloud.style.right = `${newRight}px`;
+    });
+
+    // Update the last window width
+    lastWindowWidth = window.innerWidth;
+});
 
 
+
+//---------------STICK MENU----------------------------
 // Sticky menu with section indicator
 window.addEventListener('scroll', function() {
     const sections = document.querySelectorAll('section');

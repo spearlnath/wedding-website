@@ -102,17 +102,17 @@ h3 {
   top: 40%; /* Adjust top position percentage for the plane */
 }
 
-.cloud { /* Left Cloud */
+.cloud1 { /* Left Cloud */
   right: 75%; /* Adjust right position percentage for cloud 1 */
   top: 85%; /* Adjust top position percentage for cloud 1 */
 }
 
-.cloud:nth-of-type(2) { /* Right Cloud */
+.cloud2 { /* Right Cloud */
   right: 10%; /* Adjust right position percentage for cloud 2 */
   top: 63%; /* Adjust top position percentage for cloud 2 */
 }
 
-.cloud:nth-of-type(3) { /* Top Center Cloud */
+.cloud3 { /* Top Center Cloud */
   right: 35%; /* Adjust right position percentage for cloud 3 */
   top: 10%; /* Adjust top position percentage for cloud 3 */
 }
