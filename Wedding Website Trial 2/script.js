@@ -1,3 +1,4 @@
+//------------CLOUD and PLANE Animation -------------------
 let lastScrollY = 0;
 let lastWindowWidth = window.innerWidth;
 
@@ -58,11 +59,9 @@ window.addEventListener('resize', () => {
 
     // Calculate the position of scrolling images relative to the top of the page
     const scrollingImagesPosition = scrollingImagesOffset + scrollingImagesRect.height;
-
-    if (scrollPosition<= scrollingImagesPosition){
     // Calculate the resizing factor based on the change in window width
     const resizingFactor = window.innerWidth / lastWindowWidth;
-
+    if (scrollPosition<= scrollingImagesPosition){
 
     const clouds = document.querySelectorAll(".cloud");
     const plane =  document.querySelector(".plane");
@@ -91,8 +90,6 @@ window.addEventListener('resize', () => {
     const clouds = document.querySelectorAll(".cloud");
     const plane =  document.querySelector(".plane");
 
-    // Account for resizing factor
-    const resizingFactor = window.innerWidth / lastWindowWidth;
     // Convert pixel values to percentages for clouds and plane
     // Convert desired percentage to pixels
     const desiredPlaneLeftPx = (desiredPlaneLeftPercent / 100) * window.innerWidth;
@@ -123,9 +120,20 @@ window.addEventListener('resize', () => {
 }
 });
 
+//-------------THE BIG DAY DETAILS---------------------
+// Add event listeners for the wedding timeline section
+document.addEventListener('DOMContentLoaded', function() {
+    const weddingTimeline = document.querySelectorAll('.timeline-item');
 
+    weddingTimeline.forEach(event => {
+        event.addEventListener('click', function() {
+            // Toggle visibility of event details on click
+            this.classList.toggle('active');
+        });
+    });
+});
 
-//---------------STICK MENU----------------------------
+//---------------STICKY MENU----------------------------
 // Sticky menu with section indicator
 window.addEventListener('scroll', function() {
     const sections = document.querySelectorAll('section');
@@ -242,7 +250,6 @@ document.querySelectorAll('nav a').forEach(anchor => {
          offsetTop = targetSection.offsetTop; // Get the offset from the top of the document to the target section
       }
 
-      console.log("target top:",offsetTop);
       window.scrollTo({
         top: offsetTop,
         behavior: 'smooth' // Smooth scrolling behavior

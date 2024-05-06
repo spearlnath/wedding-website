@@ -21,7 +21,7 @@ body, html {
 /* Section styling */
 .section {
     padding: 80px 20px; /* Add padding */
-    text-align: center; /* Center text */
+
 }
 
 /* Heading Font */
@@ -31,6 +31,9 @@ h1, h2, h4, h5, h6 {
   font-weight: 400;
   font-style: normal;
   font-size: 3.5em;
+}
+h2 {
+  text-align: center;
 }
 h3 {
   font-family: "Cinzel", serif;
@@ -63,6 +66,8 @@ h3 {
 /* Ensure the container has relative positioning */
 .background-image {
   position: relative;
+  min-height: 200vh;
+  width:auto;
   z-index: 1;
 }
 
@@ -140,6 +145,7 @@ h3 {
   position: fixed;
   top: 20px;
   left: 20px;
+  width: 50px;
   align-items: center; /* Align items vertically */
 }
 
@@ -331,11 +337,94 @@ p {
     text-align: center;
     margin-bottom: 10px; /* Add some space between paragraphs */
 }
-#big-day p {
-    display: block;
-    margin-bottom: 10px; /* Add some space between paragraphs */
+
+.wedding-timeline {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
 
+.timeline {
+  position: relative;
+
+}
+
+.container {
+  flex: 1;
+  padding: 20px;
+  position: relative;
+}
+
+.container.left .content {
+  padding: 20px;
+  margin-right: 20px;
+  text-align: left;
+}
+
+.container.right .content {
+  padding: 20px;
+  margin-left: 20px;
+  text-align: right;
+}
+/* Place the container to the left */
+.left {
+  left: 55%;
+}
+
+/* Place the container to the right */
+.right {
+  right: 55%;
+}
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: black;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: -1;
+}
+
+
+/* Add arrows to the left container (pointing right) */
+.container.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  z-index: 1;
+  right: 100%;
+  border: medium solid black;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent black;
+  text-align: left;
+}
+
+/* Add arrows to the right container (pointing left) */
+.container.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  z-index: 1;
+  left: 100%;
+  border: medium solid black;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent black transparent transparent;
+}
+
+
+.google-map {
+  width: 100%;
+  margin-top: 50px; /* Adjust as needed */
+}
+
+
+/*---------------IN BETWEEN SECTION ------------------*/
 .background-image-size1 {
   width: 100vw; /* Occupy full width of the container */
   height: 100vh; /* Set the height to 200vh (2 times the viewport height) */
@@ -386,7 +475,7 @@ p {
 .faq-container h2 {
   margin: 10px 0; /* Adjust margin as needed */
 }
-z
+
 /* FAQ item styling */
 .faq-item {
     margin-bottom: 20px; /* Add margin */
@@ -397,10 +486,11 @@ z
     display: none; /* Hide answer by default */
 }
 
+
 /* Toggle styling */
 .toggle {
-    float: right; /* Float toggle to the right */
-    cursor: pointer; /* Set cursor */
+  float: right; /* Float toggle to the right */
+  cursor: pointer; /* Set cursor */
 }
 
 
@@ -408,11 +498,5 @@ z
 .last-section {
   padding: 50px 10px;
   text-align: left;
-}
-
-/* Toggle styling */
-.toggle {
-    float: right; /* Float toggle to the right */
-    cursor: pointer; /* Set cursor */
 }
 
