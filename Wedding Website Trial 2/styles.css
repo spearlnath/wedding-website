@@ -122,6 +122,12 @@ h3 {
   top: 10%; /* Adjust top position percentage for cloud 3 */
 }
 
+/* Responsive font size */
+@media (max-width: 768px) {
+  .scrolling-images img {
+    width: 22%; /* Fixed width */ /* Adjust font size for smaller screens */
+  }
+}
 .hidden {
     opacity: 0;
     visibility: hidden;
@@ -233,6 +239,7 @@ h3 {
   width: fit-content; /* Adjust width as needed */
   transform: rotate(-10deg); /* Adjust rotation angle as needed */
   text-align: center; /* Center the text horizontally */
+  white-space: nowrap; /* Prevent wrapping */
 }
 .angled-letter {
   display: inline-block;
@@ -244,7 +251,33 @@ h3 {
   font-size: 7em;
   line-height: .7;
 }
+.angled-letter-a {
+  display: inline-block;
+  transform: rotate(-3.9deg); /* Counter-rotate each letter to keep them straight */
+  margin-right: -5px; /* Adjust spacing between letters as needed */
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 7em;
+  line-height: .7;
+}
+.angled-letter-r {
+  display: inline-block;
+  transform: rotate(-1.6deg); /* Counter-rotate each letter to keep them straight */
+  margin-right: -2px; /* Adjust spacing between letters as needed */
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 7em;
+  line-height: .7;
+}
+/* Responsive font size */
+@media (max-width: 768px) {
+  .angled-letter, .angled-letter-a, .angled-letter-r {
+      font-size: 5em; /* Adjust font size for smaller screens */
+  }
 
+}
 
 .fadeIn {
   animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
@@ -335,13 +368,12 @@ p {
 #big-day h1 {
     display: block;
     text-align: center;
-    margin-bottom: 10px; /* Add some space between paragraphs */
 }
 
 .wedding-timeline {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .timeline {
@@ -356,24 +388,22 @@ p {
 }
 
 .container.left .content {
-  padding: 20px;
   margin-right: 20px;
   text-align: left;
 }
 
 .container.right .content {
-  padding: 20px;
   margin-left: 20px;
   text-align: right;
 }
 /* Place the container to the left */
 .left {
-  left: 55%;
+  left: 57%;
 }
 
 /* Place the container to the right */
 .right {
-  right: 55%;
+  right: 57%;
 }
 /* The actual timeline (the vertical ruler) */
 .timeline::after {
@@ -384,9 +414,8 @@ p {
   top: 0;
   bottom: 0;
   left: 50%;
-  z-index: -1;
+  z-index: 1;
 }
-
 
 /* Add arrows to the left container (pointing right) */
 .container.left::before {
@@ -417,10 +446,20 @@ p {
   border-color: transparent black transparent transparent;
 }
 
+/* Responsive font size */
+@media (max-width: 768px) {
+  .container p {
+      font-size: .83em; /* Adjust font size for smaller screens */
+  }
+
+}
 
 .google-map {
-  width: 100%;
-  margin-top: 50px; /* Adjust as needed */
+  margin:20px;
+}
+iframe {
+  border: 0;
+
 }
 
 
