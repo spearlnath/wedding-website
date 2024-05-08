@@ -454,12 +454,19 @@ p {
 
 }
 
-.google-map {
-  margin:20px;
+#iframe-container {
+  height: 480px; /* Set a fixed height for the container */
+  width: 100%;
+  overflow: hidden; /* Hide overflow content */
+  position: relative; /* Required for absolute positioning */
+  bottom: 10%;
 }
-iframe {
-  border: 0;
-
+#lazy-iframe {
+  position: absolute; /* Position iframe absolutely */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 

@@ -284,6 +284,34 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+        // Function to lazy load the iframe when it's in the viewport
+        function lazyLoadIframe() {
+            var iframe = document.getElementById('lazy-iframe');
+            var iframeSrc = iframe.getAttribute('data-src');
+            if (iframeSrc && !iframe.getAttribute('src')) {
+                iframe.setAttribute('src', iframeSrc);
+            }
+        }
+
+        // Function to check if the iframe is in the viewport
+        function isIframeInViewport() {
+            var rect = document.getElementById('iframe-container').getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Event listener to lazy load the iframe when it's scrolled into view
+        window.addEventListener('scroll', function() {
+            if (isIframeInViewport()) {
+                lazyLoadIframe();
+                // Remove the scroll listener once the iframe is loaded
+                window.removeEventListener('scroll', arguments.callee);
+            }
+        });
 //------------Sections--------------
 window.addEventListener('scroll', function() {
     const sections = document.querySelectorAll('.section, .faq-container');
@@ -307,4 +335,12 @@ window.addEventListener('scroll', function() {
             section.classList.add('fadeOut');
         }
     });
+});
+
+
+
+//---------Cookies--------------
+// Clear all cookies
+document.cookie.split(";").forEach(function(c) { 
+    document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
 });

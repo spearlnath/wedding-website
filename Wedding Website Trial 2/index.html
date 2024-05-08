@@ -8,6 +8,23 @@
              and information will be uploaded here at yall's convinence. ">
     <title>Sharon & Brandon</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/logo/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/logo/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/logo/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/logo/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/logo/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/logo/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/logo/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/logo/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/logo/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/logo/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="assets/logo/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/logo/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <!--- Import Texts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,12 +134,17 @@
       </div>
           
   </section>
-  <section id="travel" class="section">
+  <section id="travel" class="section" >
     <h2>Travel</h2>
-    <div class="google-map">
-        <iframe title="my-map-google" src="https://www.google.com/maps/d/embed?mid=1HUF2J3IGmn0srTxZNXmde02nqv3njo0&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+    <div id="iframe-container" >
+        <!-- Placeholder content while iframe is loading -->
+        <div>Loading...</div>
+        <!-- Actual iframe with data-src attribute -->
+        <iframe id="lazy-iframe" data-src="https://www.google.com/maps/d/embed?mid=1HUF2J3IGmn0srTxZNXmde02nqv3njo0&ehbc=2E312F&noprof=1" width="640" height="480" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
+  
+  <!-- Background Image Before FAQ Section -->
   <div id="image2" class="background-image-size1">
     <img src="assets/body_image_1.avif" alt="Wedding Image 1">
   </div>
