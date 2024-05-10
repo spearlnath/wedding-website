@@ -69,15 +69,12 @@ h3 {
   min-height: 200vh;
   width:auto;
   z-index: 1;
-}
-
-/* Set the background image to cover 2x the viewport height */
-.background-image img {
   width: 100%;
   min-height: 200vh;
   object-fit: cover;
   z-index: 1;
 }
+
 
 
 /* Scrollable images container */
@@ -155,9 +152,6 @@ h3 {
   align-items: center; /* Align items vertically */
 }
 
-.sticky-logo img {
-  width: 50px; /* Adjust size as needed */
-}
 
 /* Sticky menu */
 .sticky-menu {

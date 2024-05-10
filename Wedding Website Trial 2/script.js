@@ -262,8 +262,8 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
 document.addEventListener("DOMContentLoaded", function() {
     const rsvpButton = document.getElementById("rsvpButton");
-    const imageContainer = document.querySelector(".background-image");
-    const image = document.querySelector(".background-image img");
+
+    const image = document.querySelector(".background-image");
 
     // Calculate the height of the image
     const imageHeight = image.clientHeight;
@@ -335,12 +335,4 @@ window.addEventListener('scroll', function() {
             section.classList.add('fadeOut');
         }
     });
-});
-
-
-
-//---------Cookies--------------
-// Clear all cookies
-document.cookie.split(";").forEach(function(c) { 
-    document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
 });
