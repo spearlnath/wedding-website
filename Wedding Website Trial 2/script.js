@@ -24,8 +24,6 @@ function updatePositions() {
     lastWindowWidth = windowWidth;
 }
 
-// Initial update
-updatePositions();
 
 // Update positions on scroll
 window.addEventListener('scroll', () => {
@@ -40,13 +38,54 @@ window.addEventListener('scroll', () => {
     // Calculate the position of scrolling images relative to the top of the page
     const scrollingImagesPosition = scrollingImagesOffset + scrollingImagesRect.height;
 
-      if (scrollPosition<= scrollingImagesPosition){
-          updatePositions();
-      }
+    if (scrollPosition<= scrollingImagesPosition){
+        updatePositions();
+    } else {
+        updatePostions_resize();
+    }
 
 });
 
+function updatePostions_resize(){
+        const scrollingImages = document.querySelector('.scrolling-images');
+        const scrollingImagesRect = scrollingImages.getBoundingClientRect();
 
+        // Calculate the target percentage distances for the plane and clouds once they are in view
+        const desiredPlaneLeftPercent = 20;
+        const cloud1RightPercentInView = 67;
+        const cloud2RightPercentInView = 45;
+        const cloud3RightPercentInView = 12;
+    
+        const clouds = document.querySelectorAll(".cloud");
+        const plane =  document.querySelector(".plane");
+    
+        // Convert pixel values to percentages for clouds and plane
+        // Convert desired percentage to pixels
+        const desiredPlaneLeftPx = (desiredPlaneLeftPercent / 100) * window.innerWidth;
+    
+        // Calculate the plane's new position based on the desired percentage and window height
+        plane.style.left = `${desiredPlaneLeftPx + (scrollingImagesRect.height)}px`;
+
+        clouds.forEach(cloud => {
+            const cloudRightPercent = (parseFloat(window.getComputedStyle(cloud).right) / window.innerWidth) * 100;
+            let desiredCloudRightPx;
+            switch (cloud.className) {
+                case 'cloud cloud1':
+                    desiredCloudRightPx = (cloud1RightPercentInView/100) * window.innerWidth;
+                    break;
+                case 'cloud cloud2':
+                    desiredCloudRightPx = (cloud2RightPercentInView/100) * window.innerWidth;
+                    break;
+                case 'cloud cloud3':
+                    desiredCloudRightPx = (cloud3RightPercentInView/100) * window.innerWidth;
+                    break;
+                default:
+                    break;
+            }
+            // Clouds move half of fast as plane
+            cloud.style.right = `${desiredCloudRightPx-(scrollingImagesRect.height/2)}px`;
+        });
+}
 // Update positions on window resize
 window.addEventListener('resize', () => {
     const scrollPosition = window.scrollY;
@@ -56,70 +95,48 @@ window.addEventListener('resize', () => {
 
     // Calculate the offset between the top of the page and the top of scrolling images
     const scrollingImagesOffset = scrollingImagesRect.top + scrollPosition;
-
+    
     // Calculate the position of scrolling images relative to the top of the page
     const scrollingImagesPosition = scrollingImagesOffset + scrollingImagesRect.height;
     // Calculate the resizing factor based on the change in window width
     const resizingFactor = window.innerWidth / lastWindowWidth;
-    if (scrollPosition<= scrollingImagesPosition){
-
-    const clouds = document.querySelectorAll(".cloud");
-    const plane =  document.querySelector(".plane");
-
-    const planeLeft = parseFloat(window.getComputedStyle(plane).left);
-    const newLeft = planeLeft * resizingFactor;
-    plane.style.left = `${newLeft}px`;
-
-    // Update cloud positions based on the resizing factor
-    clouds.forEach(cloud => {
-        const cloudRight = parseFloat(window.getComputedStyle(cloud).right);
-        const newRight = cloudRight * resizingFactor;
-        cloud.style.right = `${newRight}px`;
-    });
-
     // Update the last window width
     lastWindowWidth = window.innerWidth;
-} else {
+    if (scrollPosition<= scrollingImagesPosition){
 
-    // Calculate the target percentage distances for the plane and clouds once they are in view
-    const desiredPlaneLeftPercent = 20;
-    const cloud1RightPercentInView = 75;
-    const cloud2RightPercentInView = 10;
-    const cloud3RightPercentInView = 35;
+        const clouds = document.querySelectorAll(".cloud");
+        const plane =  document.querySelector(".plane");
 
-    const clouds = document.querySelectorAll(".cloud");
-    const plane =  document.querySelector(".plane");
+        const planeLeft = parseFloat(window.getComputedStyle(plane).left);
+        const newLeft = planeLeft * resizingFactor;
+        plane.style.left = `${newLeft}px`;
 
-    // Convert pixel values to percentages for clouds and plane
-    // Convert desired percentage to pixels
-    const desiredPlaneLeftPx = (desiredPlaneLeftPercent / 100) * window.innerWidth;
+        // Update cloud positions based on the resizing factor
+        clouds.forEach(cloud => {
+            const cloudRight = parseFloat(window.getComputedStyle(cloud).right);
+            const newRight = cloudRight * resizingFactor;
+            cloud.style.right = `${newRight}px`;
+        });
 
-    // Calculate the plane's new position based on the desired percentage and window height
-    plane.style.left = `${desiredPlaneLeftPx + (scrollingImagesRect.height)}px`;
+    } else {
 
-    clouds.forEach(cloud => {
-        const cloudRightPercent = (parseFloat(window.getComputedStyle(cloud).right) / window.innerWidth) * 100;
-        let desiredCloudRightPx;
-        switch (cloud.className) {
-            case 'cloud cloud1':
-                desiredCloudRightPx = (cloud1RightPercentInView/100) * window.innerWidth;
-                break;
-            case 'cloud cloud2':
-                desiredCloudRightPx = (cloud2RightPercentInView/100) * window.innerWidth;
-                break;
-            case 'cloud cloud3':
-                desiredCloudRightPx = (cloud3RightPercentInView/100) * window.innerWidth;
-                break;
-            default:
-                break;
-        }
+        updatePostions_resize();
 
-        cloud.style.right = `${desiredCloudRightPx-(scrollingImagesRect.height/2)}px`;
-    });
-
-}
+    }
 });
 
+
+// RSVP
+const rsvpButton = document.getElementById('rsvpButton');
+const rsvpButtonImg = document.getElementById('rsvp-button-img');
+
+rsvpButton.addEventListener('mouseover', () => {
+    rsvpButtonImg.src = 'assets/RSVP-black.avif';
+});
+
+rsvpButton.addEventListener('mouseout', () => {
+    rsvpButtonImg.src = 'assets/RSVP.avif';
+});
 //-------------THE BIG DAY DETAILS---------------------
 // Add event listeners for the wedding timeline section
 document.addEventListener('DOMContentLoaded', function() {
@@ -314,7 +331,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 //------------Sections--------------
 window.addEventListener('scroll', function() {
-    const sections = document.querySelectorAll('.section, .faq-container');
+    const sections = document.querySelectorAll('.section, .faq-container, .rsvp-button, .rsvpButton');
 
 
     sections.forEach(section => {
@@ -327,7 +344,7 @@ window.addEventListener('scroll', function() {
         const visiblePercentage = (Math.min(sectionBottom, windowHeight) - Math.max(sectionTop, 0)) / sectionHeight;
 
         // Add fadeIn class when a certain percentage of the section is visible
-        if (visiblePercentage >= 0.05) {
+        if (visiblePercentage >= .01) {
             section.classList.add('fadeIn');
             section.classList.remove('fadeOut'); // Remove fadeOut class if present
         } else {

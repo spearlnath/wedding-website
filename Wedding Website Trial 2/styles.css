@@ -66,11 +66,10 @@ h3 {
 /* Ensure the container has relative positioning */
 .background-image {
   position: relative;
-  min-height: 200vh;
+  min-height: 100vh;
   width:auto;
   z-index: 1;
   width: 100%;
-  min-height: 200vh;
   object-fit: cover;
   z-index: 1;
 }
@@ -83,7 +82,7 @@ h3 {
   /* Adjust positioning as needed */
   top: 0%; /* Example value */
   width: 100vw;
-  height: 50vh;
+  height: 50%;
   z-index: 2; /* Ensure images are above other content */
 
 }
@@ -91,7 +90,7 @@ h3 {
 /* Adjust image styles as needed */
 .scrolling-images img {
   position: absolute;
-  width: 20%; /* Fixed width */
+  width: 15%; /* Fixed width */
   height: auto; /* Maintain aspect ratio */
   z-index: 2;
 
@@ -101,28 +100,28 @@ h3 {
 /* Positioning for specific images */
 .plane {
   left: 20%; /* Adjust left position percentage for the plane */
-  top: 40%; /* Adjust top position percentage for the plane */
+  top: 20%; /* Adjust top position percentage for the plane */
 }
 
 .cloud1 { /* Left Cloud */
-  right: 75%; /* Adjust right position percentage for cloud 1 */
-  top: 85%; /* Adjust top position percentage for cloud 1 */
+  right: 67%; /* Adjust right position percentage for cloud 1 */
+  top: 48%; /* Adjust top position percentage for cloud 1 */
 }
 
-.cloud2 { /* Right Cloud */
-  right: 10%; /* Adjust right position percentage for cloud 2 */
-  top: 63%; /* Adjust top position percentage for cloud 2 */
+.cloud2 { /* Top Center Cloud */ 
+  right: 45%; /* Adjust right position percentage for cloud 2 */
+  top: 9%; /* Adjust top position percentage for cloud 2 */
 }
 
-.cloud3 { /* Top Center Cloud */
-  right: 35%; /* Adjust right position percentage for cloud 3 */
-  top: 10%; /* Adjust top position percentage for cloud 3 */
+.cloud3 { /* Right Cloud */
+  right: 12%; /* Adjust right position percentage for cloud 3 */
+  top: 23%; /* Adjust top position percentage for cloud 3 */
 }
 
 /* Responsive font size */
 @media (max-width: 768px) {
   .scrolling-images img {
-    width: 22%; /* Fixed width */ /* Adjust font size for smaller screens */
+    width: 17%; /* Fixed width */ /* Adjust font size for smaller screens */
   }
 }
 .hidden {
@@ -194,9 +193,9 @@ h3 {
 
 #rsvp {
   position: absolute;
-  bottom: 50%; /* Adjust this value as needed */
-  left: 0;
-  width: 50%;
+  bottom: 0%; /* Adjust this value as needed */
+  left: 15%;
+  height: 40%;
   z-index: 4; /* Ensure the RSVP section appears on top of the background image */
 }
 
@@ -217,10 +216,13 @@ h3 {
   object-fit: cover;
   z-index: 10;
 }
+.details-img {
+  width: 12%;
+}
 .overlay-text {
   position: absolute;
-  top: 20%;
-  left: 50%;
+  top: 21%;
+  left: 49%;
   transform: translate(-50%, -50%);
   width: fit-content; /* Adjust width as needed */
   margin: 50px auto; /* Center the container */
@@ -232,6 +234,7 @@ h3 {
   position: relative;
   width: fit-content; /* Adjust width as needed */
   transform: rotate(-10deg); /* Adjust rotation angle as needed */
+  left: 20%;
   text-align: center; /* Center the text horizontally */
   white-space: nowrap; /* Prevent wrapping */
 }
@@ -242,7 +245,7 @@ h3 {
   font-family: "Allura", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: 7em;
+  font-size: 10em;
   line-height: .7;
 }
 .angled-letter-a {
@@ -265,13 +268,44 @@ h3 {
   font-size: 7em;
   line-height: .7;
 }
+
+.wedding-date {
+  margin-top: 2%; /* Adjust spacing between letters as needed */
+  margin-right: -25%; /* Adjust spacing between letters as needed */
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2em;
+  text-align: right; /* Center the text horizontally */
+  color: white;
+}
 /* Responsive font size */
+@media (max-width: 1322px) {
+  .angled-letter, .angled-letter-a, .angled-letter-r {
+      font-size: 7em; /* Adjust font size for smaller screens */
+  }
+  .wedding-date {
+    font-size: 1em; /* Adjust font size for smaller screens */
+  }
+  .details-img{
+    width:15%;
+
+  }
+}
 @media (max-width: 768px) {
   .angled-letter, .angled-letter-a, .angled-letter-r {
-      font-size: 5em; /* Adjust font size for smaller screens */
+      font-size: 3em; /* Adjust font size for smaller screens */
   }
+  .wedding-date {
+    font-size: 1em; /* Adjust font size for smaller screens */
+  }
+  .details-img{
+    width:30%;
 
+  }
 }
+
 
 .fadeIn {
   animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
@@ -327,12 +361,14 @@ h3 {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  color: black;;
 }
 p {
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  color: black;;
 }
 
 /* Use a unique and descriptive class name */
@@ -372,29 +408,30 @@ p {
 
 .timeline {
   position: relative;
-
 }
 
 .container {
   flex: 1;
-  padding: 20px;
+  padding: 20px; /* Adjusted padding for less vertical space */
   position: relative;
+  margin-bottom: -150px; /* Use negative margin to create overlap */
 }
 
 .container.left .content {
   margin-right: 20px;
   text-align: left;
+
 }
 
 .container.right .content {
   margin-left: 20px;
   text-align: right;
+
 }
 /* Place the container to the left */
 .left {
   left: 57%;
 }
-
 /* Place the container to the right */
 .right {
   right: 57%;
@@ -448,6 +485,7 @@ p {
 
 }
 
+/*------------ Travel ------------------*/
 #iframe-container {
   height: 480px; /* Set a fixed height for the container */
   width: 100%;
@@ -481,21 +519,22 @@ p {
 /* RSVP button */
 
 .rsvp-button {
-    transform: translate(-50%, -50%); /* Center the button precisely */
-    background-color: #ff7f50;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    font-size: 1.2em;
-    cursor: pointer;
-    z-index: 4;
-
-  }
-
-.rsvp-button:hover {
-  background-color: #842717; /* Adjust color as needed */
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  left:5%;
+  bottom:20%;
+  z-index: 5;
+  width: 40%;
 }
+
+.rsvp-button img {
+  width: 40%;
+}
+
 
 
 
@@ -536,7 +575,13 @@ p {
 
 /* --------------Last section-------------- */
 .last-section {
-  padding: 50px 10px;
+  margin-bottom: -10px;
+  padding: -10px -5px;
   text-align: left;
+}
+.text-content img{
+  max-width: 50vw;  
+  left: 50%;
+  width: auto;
 }
 
