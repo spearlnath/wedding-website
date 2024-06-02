@@ -218,6 +218,7 @@ h3 {
 }
 .details-img {
   width: 12%;
+  height: auto;
 }
 .overlay-text {
   position: absolute;
@@ -290,7 +291,6 @@ h3 {
   }
   .details-img{
     width:15%;
-
   }
 }
 @media (max-width: 768px) {
@@ -533,6 +533,7 @@ p {
 
 .rsvp-button img {
   width: 40%;
+  height: auto;
 }
 
 
