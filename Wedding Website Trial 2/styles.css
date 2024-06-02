@@ -217,7 +217,7 @@ h3 {
   z-index: 10;
 }
 .details-img {
-  width: 12%;
+  width: 12vw;
   height: auto;
 }
 .overlay-text {
@@ -290,7 +290,8 @@ h3 {
     font-size: 1em; /* Adjust font size for smaller screens */
   }
   .details-img{
-    width:15%;
+    width:15vw;
+    height:auto;
   }
 }
 @media (max-width: 768px) {
@@ -301,8 +302,8 @@ h3 {
     font-size: 1em; /* Adjust font size for smaller screens */
   }
   .details-img{
-    width:30%;
-
+    width:30vw;
+    height:auto;
   }
 }
 
@@ -532,7 +533,7 @@ p {
 }
 
 .rsvp-button img {
-  width: 40%;
+  width: 15vw;
   height: auto;
 }
 
