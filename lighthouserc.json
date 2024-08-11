@@ -2,7 +2,7 @@
     "ci": {
       "url": ["http://localhost/", "http://localhost/posts/"],
       "collect": {
-        "staticDistDir": "./wedding website"
+        "staticDistDir": "./Wedding Website"
       }
     }
   }

@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 document.getElementById('rsvpButton').addEventListener('click', function() {
-    window.location.href = "rsvp.html"; // Redirects to the RSVP redirect page
+    window.location.href = "subpages/rsvp.html"; // Redirects to the RSVP redirect page
 });
 
 // Lazy Load Iframe
