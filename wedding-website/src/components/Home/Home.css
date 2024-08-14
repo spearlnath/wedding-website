@@ -1,0 +1,263 @@
+#home {
+    position: relative; /* Ensure the section is positioned relative */
+  }
+  
+  .fullscreen-section {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+    /* Remove or adjust other styles as needed */
+  }
+  
+  /* Ensure the container has relative positioning */
+  .background-image {
+    position: relative;
+    min-height: 100vh;
+    width:auto;
+    z-index: 1;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  
+  
+  /* Scrollable images container */
+  .scrolling-images {
+    position: absolute;
+    /* Adjust positioning as needed */
+    top: 0%; /* Example value */
+    width: 100vw;
+    height: 50%;
+    z-index: 2; /* Ensure images are above other content */
+  
+  }
+  
+  /* Adjust image styles as needed */
+  .scrolling-images img {
+    position: absolute;
+    width: 15%; /* Fixed width */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 2;
+  
+  }
+  
+  
+  /* Positioning for specific images */
+  .plane {
+    left: 20%; /* Adjust left position percentage for the plane */
+    top: 20%; /* Adjust top position percentage for the plane */
+  }
+  
+  .cloud1 { /* Left Cloud */
+    right: 67%; /* Adjust right position percentage for cloud 1 */
+    top: 48%; /* Adjust top position percentage for cloud 1 */
+  }
+  
+  .cloud2 { /* Top Center Cloud */ 
+    right: 45%; /* Adjust right position percentage for cloud 2 */
+    top: 9%; /* Adjust top position percentage for cloud 2 */
+  }
+  
+  .cloud3 { /* Right Cloud */
+    right: 12%; /* Adjust right position percentage for cloud 3 */
+    top: 23%; /* Adjust top position percentage for cloud 3 */
+  }
+  
+  /* Responsive font size */
+  @media (max-width: 768px) {
+    .scrolling-images img {
+      width: 17%; /* Fixed width */ /* Adjust font size for smaller screens */
+    }
+  }
+  .hidden {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease, visibility 0s 0.6s; /* Delay visibility change */
+  }
+  .show {
+      opacity: 1;
+      visibility: show;
+      transition: opacity 0.5s ease, visibility 0s 0.6s; /* Delay visibility change */
+  }
+  
+  /* Sticky styling */
+  .sticky {
+      position: fixed;
+      bottom: 50%; /* Center the button vertically */
+      left: 50%; /* Center the button horizontally */
+  }
+  
+  
+  /*change color */
+  .background_color_change {
+  
+      background-color:rgb(245,223,173,.4); /* Set the background color with 50% opacity */
+      padding: 15px; /* Add padding */
+      animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
+  }
+  /* RSVP button */
+
+.rsvp-button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  left:5%;
+  bottom:20%;
+  z-index: 5;
+  width: 40%;
+}
+
+.rsvp-button img {
+  width: 15vw;
+  height: auto;
+}
+
+  #rsvp {
+    position: absolute;
+    bottom: 0%; /* Adjust this value as needed */
+    left: 15%;
+    height: 40%;
+    z-index: 4; /* Ensure the RSVP section appears on top of the background image */
+  }
+  
+  
+  
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content; /* Adjust width as needed */
+    animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
+    z-index: 11;
+  }
+  .overlay img {
+    width: 100%;
+    min-height: 200vh;
+    object-fit: cover;
+    z-index: 10;
+  }
+  .details-img {
+    width: 12vw;
+    height: auto;
+  }
+  .overlay-text {
+    position: absolute;
+    top: 21%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    width: fit-content; /* Adjust width as needed */
+    margin: 50px auto; /* Center the container */
+    animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
+    z-index: 10;
+  }
+  .angled-text-container {
+    color: white;
+    position: relative;
+    width: fit-content; /* Adjust width as needed */
+    transform: rotate(-10deg); /* Adjust rotation angle as needed */
+    left: 20%;
+    text-align: center; /* Center the text horizontally */
+    white-space: nowrap; /* Prevent wrapping */
+  }
+  .angled-letter {
+    display: inline-block;
+    transform: rotate(4deg); /* Counter-rotate each letter to keep them straight */
+    margin-right: 2px; /* Adjust spacing between letters as needed */
+    font-family: "Allura", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10em;
+    line-height: .7;
+  }
+  .angled-letter-a {
+    display: inline-block;
+    transform: rotate(-3.9deg); /* Counter-rotate each letter to keep them straight */
+    margin-right: -2px; /* Adjust spacing between letters as needed */
+    font-family: "Allura", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7em;
+    line-height: .7;
+  }
+  .angled-letter-r {
+    display: inline-block;
+    transform: rotate(-4deg); /* Counter-rotate each letter to keep them straight */
+    margin-right: -2px; /* Adjust spacing between letters as needed */
+    font-family: "Allura", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7em;
+    line-height: .7;
+  }
+  
+  .wedding-date {
+    margin-top: 2%; /* Adjust spacing between letters as needed */
+    margin-right: -25%; /* Adjust spacing between letters as needed */
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    text-align: right; /* Center the text horizontally */
+    color: white;
+  }
+  /* Responsive font size */
+  @media (max-width: 1322px) {
+    .angled-letter, .angled-letter-a, .angled-letter-r {
+        font-size: 7em; /* Adjust font size for smaller screens */
+    }
+    .wedding-date {
+      font-size: 1em; /* Adjust font size for smaller screens */
+    }
+    .details-img{
+      width:15vw;
+      height:auto;
+    }
+  }
+  @media (max-width: 768px) {
+    .angled-letter, .angled-letter-a, .angled-letter-r {
+        font-size: 3em; /* Adjust font size for smaller screens */
+    }
+    .angled-letter-a {
+        margin-right: -1px;
+    }
+
+    .wedding-date {
+      font-size: 1em; /* Adjust font size for smaller screens */
+    }
+    .details-img{
+      width:30vw;
+      height:auto;
+    }
+  }
+  
+  
+  .fadeIn {
+    animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
+  }
+  .fadeOut {
+      animation: fadeOut 1s ease forwards; /* Apply fade-in animation */
+  }
+  @keyframes fadeIn {
+      from {
+          opacity: 0; /* Start with opacity set to 0 */
+      }
+      to {
+          opacity: 1; /* Fade in to full opacity */
+      }
+  }
+  
+  @keyframes fadeOut {
+      from {
+          opacity: 1; /* Start with opacity set to 0 */
+      }
+      to {
+          opacity: 0; /* Fade in to full opacity */
+      }
+  }

@@ -1,0 +1,53 @@
+
+/*---------------IN BETWEEN SECTION ------------------*/
+.background-image-size1 {
+    width: 100vw; /* Occupy full width of the container */
+    height: auto; /* Set the height to 200vh (2 times the viewport height) */
+    object-fit: cover; /* Ensure the image covers the entire container, cropping if necessary */
+    z-index: -1;
+  }
+  .background-image-size1 img {
+    width: 100vw; /* Occupy full width of the container */
+    min-height: 100vh; /* Set the height to 200vh (2 times the viewport height) */
+    
+    object-fit: cover; /* Ensure the image covers the entire container, cropping if necessary */
+    z-index: -1;
+  }
+
+
+/* --------------FAQ Section-------------- */
+.faq-container {
+
+    align-items: center; /* Vertically center */
+    background-color: #e0f2f1; /* Set background color */
+    padding: 20px; /* Add padding */
+    max-width: 370px; /* Set maximum width */
+    margin: 0 auto; /* Center horizontally */
+    z-index: 4;
+    text-align: center;
+}
+
+/* Reduce margin for h2 within .faq-container */
+.faq-container h2 {
+  margin: 10px 0; /* Adjust margin as needed */
+}
+
+/* FAQ item styling */
+.faq-item {
+    margin-bottom: 20px; /* Add margin */
+    cursor: pointer; /* Set cursor */
+    z-index: 1;
+    pointer-events: auto;
+}
+
+/* Answer styling */
+.answer {
+    display: none; /* Hide answer by default */
+}
+
+
+/* Toggle styling */
+.toggle {
+  float: right; /* Float toggle to the right */
+  cursor: pointer; /* Set cursor */
+}
