@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import '../../App.css';
@@ -84,7 +84,7 @@ function Home() {
       {isHighQualityLoaded && (
         <>
           <button id="rsvpButton" className="rsvp-button">
-            <img src={rsvp} id="rsvp-button-img" alt="RSVP Button" onClick={handleRSVPClick} />
+            <img src={rsvp} id="rsvp-button-img" width = "480" height = "360"alt="RSVP Button" onClick={handleRSVPClick} />
           </button>
 
           <div className="overlay-text">
@@ -113,10 +113,10 @@ function Home() {
           </div>
 
           <div className="scrolling-images">
-            <img src={plane} className="plane" alt="Plane" />
-            <img src={cloud1} className="cloud cloud1" alt="Cloud" />
-            <img src={cloud2} className="cloud cloud2" alt="Cloud" />
-            <img src={cloud3} className="cloud cloud3" alt="Cloud" />
+            <img src={plane} className="plane" width="242" height="146" alt="Plane" />
+            <img src={cloud1} className="cloud cloud1" width="237" height="143" alt="Cloud" />
+            <img src={cloud2} className="cloud cloud2" width="237" height="160" alt="Cloud" />
+            <img src={cloud3} className="cloud cloud3" width="237" height="134" alt="Cloud" />
           </div>
         </>
       )}

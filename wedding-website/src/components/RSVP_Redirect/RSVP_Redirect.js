@@ -1,5 +1,5 @@
 // src/components/Subpages/RSVP_Redirect.js
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './RSVP_Redirect.css';
 
 function RSVP_Redirect() {

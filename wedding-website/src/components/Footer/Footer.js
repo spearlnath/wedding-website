@@ -1,5 +1,4 @@
 // src/components/Header.js
-import React from 'react';
 
 import '../../App.css'; // If you have specific styles
 import './Footer.css'; // If you have specific styles

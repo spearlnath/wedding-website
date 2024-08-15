@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './components/Home/Home';
@@ -19,14 +19,14 @@ function App() {
         <Route
           path="/"
           element={
-            <React.Fragment>
+            <Fragment>
               <Header />
               <Home />
               <BigDay/>
               <Travel/>
               <FAQ/>
               <Footer />
-            </React.Fragment>
+            </Fragment>
           }
         />
 

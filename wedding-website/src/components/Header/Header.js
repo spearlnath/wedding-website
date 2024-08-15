@@ -1,5 +1,5 @@
 // src/components/Header.js
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 
 import '../../App.css'; // If you have specific styles
 import './Header.css'; // If you have specific styles
