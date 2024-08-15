@@ -22,7 +22,7 @@ jobs:
         node-version: "14.x"
 
     - name: Install
-      run: npm ci --prefix ./wedding-website && npm i -g http-server @lhci/cli --prefix ./wedding-website
+      run: npm i -g http-server @lhci/cli --prefix ./wedding-website
 
     - name: Build
       run: npm run build --prefix ./wedding-website
