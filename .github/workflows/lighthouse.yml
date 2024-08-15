@@ -25,10 +25,10 @@ jobs:
       run: npm install --prefix ./wedding-website 
 
     - name: Install LH Dependencies
-      run: npm i -g http-server @lhci/cli --prefix ./wedding-website
+      run: cd ./wedding-website && npm i -g http-server @lhci/cli --prefix ./wedding-website
 
     - name: Build
-      run: cd ./wedding-website && npm run build 
+      run: npm run build 
 
     - name: LighthouseCI
-      run:  lhci autorun
+      run: lhci autorun
