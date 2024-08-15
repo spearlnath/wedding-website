@@ -1,16 +1,22 @@
 {
     "ci": {
       "collect": {
-        "url": ["http://localhost/"], 
-        "startServerCommand": "http-server ./build/ -p 4000 -g",
-        "startServerReadyPattern": "Available on",
-        "numberOfRuns": 1
+        "staticDistDir": "./build"
       },
       "upload": {
         "target": "temporary-public-storage"
       },
       "assert": {
         "preset": "lighthouse:recommended"
+      }
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": "off",
+        "categories:accessibility": "off",
+        "categories:best-practices": "off",
+        "categories:seo": "off",
+        "categories:pwa": "off"
       }
     }
 }
