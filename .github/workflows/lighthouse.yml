@@ -22,7 +22,7 @@ jobs:
         node-version: "20.12.2"
 
     - name: Install NodeModules
-      run: npm ci --prefix ./wedding-website 
+      run: npm install --prefix ./wedding-website 
 
     - name: Install LH Dependencies
       run: npm i -g http-server @lhci/cli --prefix ./wedding-website
