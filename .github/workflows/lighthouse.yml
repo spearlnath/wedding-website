@@ -33,5 +33,7 @@ jobs:
       run: npm run build 
 
     - name: LighthouseCI
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Using the secret here
       working-directory: ./wedding-website
       run: lhci autorun
