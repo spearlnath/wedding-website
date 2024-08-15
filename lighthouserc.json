@@ -1,8 +1,0 @@
-{
-    "ci": {
-      "url": ["http://localhost/", "http://localhost/posts/"],
-      "collect": {
-        "staticDistDir": "./Wedding Website Trial 2"
-      }
-    }
-  }

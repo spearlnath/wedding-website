@@ -1,0 +1,117 @@
+
+/*------------BIG DAY------------------*/
+#big-day h1 {
+    display: block;
+    text-align: center;
+    
+}
+.row-col-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  position: relative; /* To position the lines */
+}
+
+
+.wedding-timeline {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.timeline {
+  position: relative;
+
+}
+
+.container {
+  flex: 1;
+  padding: 20px; /* Adjusted padding for less vertical space */
+  position: relative;
+  margin-bottom: -150px; /* Use negative margin to create overlap */
+}
+
+.container.left .content {
+  margin-right: 20px;
+  text-align: center;
+
+}
+
+.container.right .content {
+  margin-left: 20px;
+  text-align: center;
+
+}
+/* Place the container to the left */
+.left {
+  left: 57%;
+}
+/* Place the container to the right */
+.right {
+  right: 57%;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  background-color: black;
+  top: 10%;
+  bottom: -25%;
+  left: 50%;
+  z-index: 1;
+}
+
+/* Add arrows to the left container (pointing right) */
+.container.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  z-index: 1;
+  right: 100%;
+  border: medium solid black;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent black;
+  text-align: left;
+}
+
+/* Add arrows to the right container (pointing left) */
+.container.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  z-index: 1;
+  left: 100%;
+  border: medium solid black;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent black transparent transparent;
+}
+
+/* Responsive font size */
+@media (max-width: 768px) {
+  .container p {
+      font-size: .83em; /* Adjust font size for smaller screens */
+  }
+
+.row-col-box {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+  
+ .row-col-box .a{
+    display: grid;
+    gap: 15px;
+    position: relative; /* To position the lines */
+    grid-row: 1;
+  }
+ .row-col-box .b {
+    margin-top:10px;
+    grid-row: 2;
+    margin-top: 25%;
+  }
+}

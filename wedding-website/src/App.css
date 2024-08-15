@@ -1,0 +1,103 @@
+/* app.css */
+
+/* ~~~~~~~~~~Text Formatting~~~~~~~~~~*/
+
+/* General styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #f5dfad;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+/* Section styling */
+.section {
+  padding: 80px 20px;
+}
+
+/* Heading Font */
+h1, h2, h4, h5, h6 {
+font-family: "Cinzel", serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+font-size: 3.5em;
+}
+
+h2 {
+text-align: center;
+}
+
+h3 {
+font-family: "Cinzel", serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+}
+
+/*~~~~~~~~~~~~Fonts~~~~~~~~~~~~~~~~~~~~*/
+.overlay h1 {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.overlay p,h2,h3,h4 {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+h1 {
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-style: normal;
+
+}
+h2,h4 {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+h3 {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: black;;
+}
+p {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: black;;
+}
+
+/* Use a unique and descriptive class name */
+
+.cinzel-med {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.eb-garamond-norm {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.allura-regular {
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-style: normal;
+}

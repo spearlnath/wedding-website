@@ -16,8 +16,24 @@ jobs:
     - name: Checkout Repository # Name of the step
       uses: actions/checkout@v4 # Action to checkout the repository
 
-    - name: Run Lighthouse CI
-      uses: treosh/lighthouse-ci-action@v2
+    - name: Setup node
+      uses: actions/setup-node@v1
       with:
-        configPath: "./lighthouserc.json"
-        temporaryPublicStorage: true
+        node-version: "20.12.2"
+
+    - name: Install NodeModules
+      run: npm install --prefix ./wedding-website 
+
+    - name: Install LH Dependencies
+      working-directory: ./wedding-website
+      run: npm i -g http-server @lhci/cli 
+
+    - name: Build
+      working-directory: ./wedding-website
+      run: npm run build 
+
+    - name: LighthouseCI
+      env:
+        LHCI_GITHUB_APP_TOKEN: ${{ secrets.GH_TOKEN }}  # Using the secret here
+      working-directory: ./wedding-website
+      run: lhci autorun
