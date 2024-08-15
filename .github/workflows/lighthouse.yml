@@ -21,7 +21,10 @@ jobs:
       with:
         node-version: "14.x"
 
-    - name: Install
+    - name: Install NodeModules
+      run: npm install @babel/core @babel/cli @babel/preset-env --save-dev && npm ci --prefix ./wedding-website 
+
+    - name: Install LH Dependencies
       run: npm i -g http-server @lhci/cli --prefix ./wedding-website
 
     - name: Build
