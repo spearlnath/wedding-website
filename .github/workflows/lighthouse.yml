@@ -19,10 +19,10 @@ jobs:
     - name: Setup node
       uses: actions/setup-node@v1
       with:
-        node-version: "14.x"
+        node-version: "20.12.2"
 
     - name: Install NodeModules
-      run: npm install @babel/core @babel/cli @babel/preset-env --prefix ./wedding-website --save-dev && npm ci --prefix ./wedding-website 
+      run: npm ci --prefix ./wedding-website 
 
     - name: Install LH Dependencies
       run: npm i -g http-server @lhci/cli --prefix ./wedding-website
