@@ -28,7 +28,7 @@ jobs:
       run: npm i -g http-server @lhci/cli --prefix ./wedding-website
 
     - name: Build
-      run: npm run build --prefix ./wedding-website
+      run: cd ./wedding-website && npm run build --prefix ./wedding-website
 
     - name: LighthouseCI
-      run: lhci autorun --prefix ./wedding-website
+      run:  lhci autorun
