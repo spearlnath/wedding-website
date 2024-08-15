@@ -10,6 +10,7 @@
     /* Remove or adjust other styles as needed */
   }
   
+
   /* Ensure the container has relative positioning */
   .background-image {
     position: relative;
@@ -20,7 +21,7 @@
     object-fit: cover;
     z-index: 1;
   }
-  
+
   
   
   /* Scrollable images container */
@@ -95,7 +96,7 @@
   
       background-color:rgb(245,223,173,.4); /* Set the background color with 50% opacity */
       padding: 15px; /* Add padding */
-      animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
+      animation: fadeIn 2s ease forwards; /* Apply fade-in animation */
   }
   /* RSVP button */
 
@@ -106,8 +107,8 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  left:5%;
-  bottom:20%;
+  left:10%;
+  bottom:25%;
   z-index: 5;
   width: 40%;
 }
@@ -187,7 +188,7 @@
   }
   .angled-letter-r {
     display: inline-block;
-    transform: rotate(-4deg); /* Counter-rotate each letter to keep them straight */
+    transform: rotate(-1deg); /* Counter-rotate each letter to keep them straight */
     margin-right: -2px; /* Adjust spacing between letters as needed */
     font-family: "Allura", cursive;
     font-weight: 400;

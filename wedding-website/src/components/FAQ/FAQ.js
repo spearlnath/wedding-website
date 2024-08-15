@@ -1,4 +1,3 @@
-// src/components/FAQ.js
 import React, { useEffect } from 'react';
 
 import '../../App.css';
@@ -10,25 +9,30 @@ function FAQ() {
   
   useEffect(() => {
 
+    // Function to handle the FAQ item toggle
+    const handleItemClick = function() {
+      const answer = this.querySelector('.answer');
+      const toggle = this.querySelector('.toggle');
+
+      const isActive = answer.style.display === 'block';
+
+      answer.style.display = isActive ? 'none' : 'block';
+      toggle.textContent = isActive ? '+' : '-';
+    };
+
     // FAQ Section Toggle
     const faqItems = document.querySelectorAll('.faq-item');
 
     faqItems.forEach((item) => {
-      item.addEventListener('click', function() {
-        const answer = this.querySelector('.answer');
-        const toggle = this.querySelector('.toggle');
-
-        const isActive = answer.style.display === 'block';
-
-        answer.style.display = isActive ? 'none' : 'block';
-        toggle.textContent = isActive ? '+' : '-';
-      });
+      item.addEventListener('click', handleItemClick);
     });
 
     // FAQ Section Scroll
     const handleScroll = () => {
       const faqSection = document.getElementById("faq");
       const imageSection = document.getElementById("image2");
+      if (!imageSection) return;  // Ensure imageSection is present
+
       const imageHeight = imageSection.offsetHeight;
       const scrollY = window.scrollY;
 
@@ -46,7 +50,7 @@ function FAQ() {
     // Cleanup event listeners on unmount
     return () => {
       faqItems.forEach((item) => {
-        item.removeEventListener('click', () => {});
+        item.removeEventListener('click', handleItemClick);
       });
       window.removeEventListener("scroll", handleScroll);
     };
@@ -67,7 +71,7 @@ function FAQ() {
             What time should I arrive to the ceremony?
             <span className="toggle">+</span>
           </h3>
-          <div className="answer">
+          <div className="answer" style={{ display: 'none' }}>
             <p>Answer to question 1 goes here.</p>
           </div>
         </div>
@@ -76,7 +80,7 @@ function FAQ() {
             Will alcohol be served at the wedding?
             <span className="toggle">+</span>
           </h3>
-          <div className="answer">
+          <div className="answer" style={{ display: 'none' }}>
             <p>No</p>
           </div>
         </div>
@@ -85,7 +89,7 @@ function FAQ() {
             What is the dress code?
             <span className="toggle">+</span>
           </h3>
-          <div className="answer">
+          <div className="answer" style={{ display: 'none' }}>
             <p>Answer to question 2 goes here.</p>
           </div>
         </div>
@@ -94,7 +98,7 @@ function FAQ() {
             Can I bring a date?
             <span className="toggle">+</span>
           </h3>
-          <div className="answer">
+          <div className="answer" style={{ display: 'none' }}>
             <p>No.</p>
           </div>
         </div>
@@ -103,7 +107,7 @@ function FAQ() {
             Are children welcome?
             <span className="toggle">+</span>
           </h3>
-          <div className="answer">
+          <div className="answer" style={{ display: 'none' }}>
             <p>No.</p>
           </div>
         </div>
