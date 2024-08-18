@@ -1,5 +1,6 @@
+// src/components/Home.js
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import '../../App.css';
 import './Home.css';
@@ -14,6 +15,7 @@ import cloud2 from '../../assets/Cloud_1.avif';
 import cloud3 from '../../assets/Cloud_3.avif';
 
 function Home() {
+  const location = useLocation();
   const navigate = useNavigate();
   const [isHighQualityLoaded, setIsHighQualityLoaded] = useState(false);
 
@@ -42,31 +44,62 @@ function Home() {
 
       const scrolledPercentage = (scrollPosition / imageHeight) * 100;
 
-      if (scrolledPercentage >= 20 && scrolledPercentage <= 70) {
-        rsvpButton.classList.add('sticky', 'fadeIn');
-        rsvpButton.classList.remove('fadeOut');
-      } else {
-        rsvpButton.classList.remove('sticky', 'fadeIn');
-        rsvpButton.classList.add('fadeOut');
+      if (rsvpButton) {
+        if (scrolledPercentage >= 20 && scrolledPercentage <= 70) {
+          rsvpButton.classList.add('sticky', 'fadeIn');
+          rsvpButton.classList.remove('fadeOut');
+        } else {
+          rsvpButton.classList.remove('sticky', 'fadeIn');
+          rsvpButton.classList.add('fadeOut');
+        }
       }
     };
 
     window.addEventListener('scroll', handleScroll);
 
+
+    // Check for section to scroll to from the state
+    if (location.state?.scrollTo) {
+      const targetSection = document.getElementById(location.state.scrollTo);
+      if (targetSection) {
+        let top_scroll = location.state.scrollTo === "faq" ?targetSection.offsetTop- (targetSection.offsetHeight*.9) : targetSection.offsetTop;
+        window.scrollTo({
+          top: top_scroll,
+          behavior: 'smooth'
+        });
+      }
+    }
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [location.state?.scrollTo]);
+
   // RSVP Button hover effect
-  const rsvpButtonImg = document.getElementById('rsvp-button-img');
-  if (rsvpButtonImg) {
-    document.getElementById('rsvpButton').addEventListener('mouseover', () => {
-      rsvpButtonImg.src = rsvp_black;
-    });
-    document.getElementById('rsvpButton').addEventListener('mouseout', () => {
-      rsvpButtonImg.src = rsvp;
-    });
-  }
+  useEffect(() => {
+    const rsvpButton = document.getElementById('rsvpButton');
+    if (rsvpButton) {
+      const rsvpButtonImg = document.getElementById('rsvp-button-img');
+      rsvpButton.addEventListener('mouseover', () => {
+        if (rsvpButtonImg) rsvpButtonImg.src = rsvp_black;
+      });
+      rsvpButton.addEventListener('mouseout', () => {
+        if (rsvpButtonImg) rsvpButtonImg.src = rsvp;
+      });
+    }
+
+    return () => {
+      if (rsvpButton) {
+        const rsvpButtonImg = document.getElementById('rsvp-button-img');
+        rsvpButton.removeEventListener('mouseover', () => {
+          if (rsvpButtonImg) rsvpButtonImg.src = rsvp_black;
+        });
+        rsvpButton.removeEventListener('mouseout', () => {
+          if (rsvpButtonImg) rsvpButtonImg.src = rsvp;
+        });
+      }
+    };
+  }, []);
 
   const handleRSVPClick = () => {
     navigate('/rsvp');
@@ -84,7 +117,7 @@ function Home() {
       {isHighQualityLoaded && (
         <>
           <button id="rsvpButton" className="rsvp-button">
-            <img src={rsvp} id="rsvp-button-img" width = "480" height = "360"alt="RSVP Button" onClick={handleRSVPClick} />
+            <img src={rsvp} id="rsvp-button-img" width="480" height="360" alt="RSVP Button" onClick={handleRSVPClick} />
           </button>
 
           <div className="overlay-text">
