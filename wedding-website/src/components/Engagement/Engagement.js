@@ -23,7 +23,6 @@ function Engagement() {
         };
 
         scrollToTop();
-``
         // Smoothly scroll to the specific section if a hash is present in the URL
         const hash = window.location.hash;
         if (hash) {
