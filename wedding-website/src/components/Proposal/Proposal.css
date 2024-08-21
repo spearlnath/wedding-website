@@ -1,0 +1,12 @@
+
+/* The actual timeline (the vertical ruler) */
+
+@media (max-width: 768px) {
+  .angled-letter, .angled-letter-a, .angled-letter-r {
+      font-size: 5em; /* Adjust font size for smaller screens */
+  }
+}
+.timeline::after {
+    bottom: -5%;
+
+  }

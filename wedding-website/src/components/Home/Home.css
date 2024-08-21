@@ -162,7 +162,7 @@
     position: relative;
     width: fit-content; /* Adjust width as needed */
     transform: rotate(-10deg); /* Adjust rotation angle as needed */
-    left: 20%;
+    left: 10%;
     text-align: center; /* Center the text horizontally */
     white-space: nowrap; /* Prevent wrapping */
   }
