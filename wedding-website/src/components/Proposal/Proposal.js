@@ -2,27 +2,31 @@
 
 import '../../App.css';
 import '../Home/Home.css';
+import '../BigDay/BigDay.css'
 import './Proposal.css';
 
 import landing from '../../assets/proposal photos/WeddingWebsiteLanding.avif';
+import landingloqual from '../../assets/proposal photos/Proposal_Full_loqual.avif';
 
-import { useEffect } from 'react';
+import nc2018 from '../../assets/proposal photos/nc2018.avif'
+import nc2018recreate from '../../assets/proposal photos/recreate.avif'
+
+import proposal from '../../assets/proposal photos/proposal.avif'
+import kasama from '../../assets/proposal photos/kasama.avif'
+import fieldmuseum from '../../assets/proposal photos/fieldmuseum.avif'
+import bavetts from '../../assets/proposal photos/Bavetts.avif'
+import { useEffect, useState } from 'react';
 
 function Proposal() {
-    useEffect(() => {
-        // Scroll to top of the page when the component mounts
-        const scrollToTop = () => {
-            const scrollStep = -window.scrollY / (700 / 15); // Change 500 to adjust the scroll duration
-            const scrollInterval = setInterval(() => {
-                if (window.scrollY !== 0) {
-                    window.scrollBy(0, scrollStep);
-                } else {
-                    clearInterval(scrollInterval);
-                }
-            }, 15); // Change 15 to adjust the scroll speed
-        };
+    const [isHighQualityLoaded, setIsHighQualityLoaded] = useState(false);
 
-        scrollToTop();
+    useEffect(() => {
+        const img = new Image();
+        img.src = landing;
+        img.onload = () => setIsHighQualityLoaded(true);
+
+        // Scroll to top of the page when the component mounts
+        window.scrollTo(0, 0);
 
         // Smoothly scroll to the specific section if a hash is present in the URL
         const hash = window.location.hash;
@@ -40,7 +44,7 @@ function Proposal() {
         <div>
             {/* <!-- Proposal Section --> */}
             <section id="Proposal" class="fullscreen-section">
-                <img src={landing} class="background-image" alt="Proposal" />
+                <img src={isHighQualityLoaded ? landing : landingloqual}  class="background-image" alt="Proposal" />
                 
                 <div class="overlay-text">
                     <div class="angled-text-container">
@@ -63,10 +67,59 @@ function Proposal() {
                 <h2>Proposal Details</h2>
                 <div class="row-col-box">
                     <div class="a">
-                        <p>Here, you can share the story of your Proposal or include pictures from the event.</p>
+                     <p>I always knew I wanted to propose in Chicago—a city that held a special place in our relationship, especially at Buckingham Fountain. It was there that our bond began to deepen, moving beyond the group setting we were initially in.<br /><br />
+
+                     &emsp; I envisioned turning the proposal into a memorable trip, allowing us to savor our engagement before returning to daily life. Chicago, followed by Toronto, seemed like the perfect itinerary.<br /><br />
+
+                     &emsp; Originally, the proposal was set for Tuesday, May 14th, at Buckingham Fountain. However, with stormy weather forecasted, I decided to shift the plan to Wednesday, May 15th. Since both Sharon and I are passionate about food, I planned to start the day with brunch at the iconic restaurant Kasama. After a delightful meal, we headed to the Field Museum. It was there that my nerves began to set in.<br /><br />
+
+                     &emsp; The delay due to the weather meant the photographer’s availability was limited, which made our time at the museum feel a bit rushed. We returned to the hotel to change before heading to the park for the big moment, with dinner planned afterward. Despite two Ubers canceling on us, causing a 15-minute delay, we eventually made our way to the park on foot. Once we spotted the photographer, everything fell into place.<br /><br />
+
+                     &emsp; We later celebrated with a dinner at Bavette’s, enjoying an intimate setting to remember our moment in time. May 15, 2024, is now and forever our day—a memory we will cherish for a lifetime.</p>
+                     <br /><br />
+                     <p><i>SASE National Conference in Chicago back in 2018</i></p>
+                     <img src={nc2018}  alt="Past Us" width="400vw" layout="center"/>
+                     <p><i>Us after the proposal, Chicago 2024</i></p>
+                     <img src={nc2018recreate}  alt="Us Now" width="400vw"/>
                     </div>
                     <div class="b">
                         {/* <!-- Additional content or images can go here --> */}
+                        <div className="wedding-timeline">
+                                <div className="timeline">
+                                    <div className="container right">
+                                        <div className="content">
+                                            <img src={kasama} className="details-img" width="370" height="370" alt="wedding detail imgs"/>
+                                            <h3>Eat Kasama</h3>
+                                            <h3>10:41 AM</h3>
+                                            <p>Kasama, Filipino Bakery<br />Chicago, IL</p>
+                                        </div>
+                                    </div>
+                                    <div className="container left">
+                                        <div className="content">
+                                        <img src={fieldmuseum} className="details-img" width="370" height="370" alt="wedding detail imgs"/>
+                                            <h3>Visitng Sue</h3>
+                                            <h3>12:51 PM</h3>
+                                            <p>Field History Museum<br /> Chicago, IL</p>
+                                        </div>
+                                    </div>
+                                    <div className="container right">
+                                        <div className="content">
+                                        <img src={proposal} className="details-img" width="370" height="370" alt="wedding detail imgs"/>
+                                            <h3>"Dress Up"</h3>
+                                            <h3>4:30 PM</h3>
+                                            <p>Buckingham Fountain<br /> Chicago, IL</p>
+                                        </div>
+                                    </div>
+                                    <div className="container left">
+                                        <div className="content">
+                                        <img src={bavetts} className="details-img" width="370" height="370" alt="wedding detail imgs"/>
+                                            <h3>Late Night</h3>
+                                            <h3>9:48 PM</h3>
+                                            <p>Bavett's Bistro<br /> Chicago, IL</p>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

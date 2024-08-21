@@ -10,18 +10,8 @@ function OurStory() {
 
     useEffect(() => {
         // Scroll to top of the page when the component mounts
-        const scrollToTop = () => {
-            const scrollStep = -window.scrollY / (700 / 15); // Change 500 to adjust the scroll duration
-            const scrollInterval = setInterval(() => {
-                if (window.scrollY !== 0) {
-                    window.scrollBy(0, scrollStep);
-                } else {
-                    clearInterval(scrollInterval);
-                }
-            }, 15); // Change 15 to adjust the scroll speed
-        };
+        window.scrollTo(0, 0);
 
-        scrollToTop();
 
         // Smoothly scroll to the specific section if a hash is present in the URL
         const hash = window.location.hash;

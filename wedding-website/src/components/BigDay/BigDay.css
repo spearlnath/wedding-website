@@ -92,6 +92,8 @@
   border-color: transparent black transparent transparent;
 }
 
+
+
 /* Responsive font size */
 @media (max-width: 768px) {
   .container p {
