@@ -220,6 +220,7 @@
       width:15vw;
       height:auto;
     }
+    
   }
   @media (max-width: 768px) {
     .angled-letter, .angled-letter-a, .angled-letter-r {
@@ -236,6 +237,7 @@
       width:30vw;
       height:auto;
     }
+
   }
   
   

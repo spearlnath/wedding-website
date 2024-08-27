@@ -36,8 +36,8 @@ function Engagement() {
             {/* <!-- Engagement Section --> */}
             <section id="engagement" class="fullscreen-section">
                 <img src={isHighQualityLoaded ? landing : landingloqual}  class="background-image" alt="Engagement" />
-                
-                <div class="overlay-text">
+                {isHighQualityLoaded && (
+                <div class="overlay-text" id="engagement-text">
                     <div class="angled-text-container">
                         <div class="angled-letter">E</div>
                         <div class="angled-letter">n</div>
@@ -50,9 +50,9 @@ function Engagement() {
                         <div class="angled-letter">n</div>
                         <div class="angled-letter">t</div>
                     </div>
-                    <p class="wedding-date">To new beginnings...</p>
-                    <p className="wedding-date">Whale Peak & Rocky Point, CA, USA</p>
-                </div>
+                    <p class="wedding-date" id="engagement-text1">To new beginnings...</p>
+                    <p className="wedding-date" id="engagement-text1">Whale Peak & Rocky Point, CA, USA</p>
+                </div>)}
             </section>
         
             {/* <!-- Engagement Details Section --> */}

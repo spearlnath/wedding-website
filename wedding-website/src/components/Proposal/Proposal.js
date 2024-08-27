@@ -28,16 +28,27 @@ function Proposal() {
         // Scroll to top of the page when the component mounts
         window.scrollTo(0, 0);
 
-        // Smoothly scroll to the specific section if a hash is present in the URL
-        const hash = window.location.hash;
-        if (hash) {
-            const targetSection = document.querySelector(hash);
-            if (targetSection) {
-                setTimeout(() => {
-                    targetSection.scrollIntoView({ behavior: 'smooth' });
-                }, 300); // Delay to ensure the page has scrolled to the top first
-            }
-        }
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section, .img, .content');
+        
+            console.log(sections);
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const sectionBottom = section.getBoundingClientRect().bottom;
+                const windowHeight = window.innerHeight;
+                const sectionHeight = section.clientHeight;
+        
+                const visiblePercentage = (Math.min(sectionBottom, windowHeight) - Math.max(sectionTop, 0)) / sectionHeight;
+        
+                if (visiblePercentage >= 0.01) {
+                    section.classList.add('fadeIn');
+                    section.classList.remove('fadeOut');
+                } else {
+                    section.classList.remove('fadeIn');
+                    section.classList.add('fadeOut');
+                }
+            });
+        });
     }, []); // Empty dependency array means this effect runs only once after the component mounts
 
     return (
@@ -45,28 +56,28 @@ function Proposal() {
             {/* <!-- Proposal Section --> */}
             <section id="Proposal" class="fullscreen-section">
                 <img src={isHighQualityLoaded ? landing : landingloqual}  class="background-image" alt="Proposal" />
-                
-                <div class="overlay-text">
-                    <div class="angled-text-container">
-                        <div class="angled-letter">P</div>
-                        <div class="angled-letter">r</div>
-                        <div class="angled-letter">o</div>
-                        <div class="angled-letter">p</div>
-                        <div class="angled-letter">o</div>
-                        <div class="angled-letter">s</div>
-                        <div class="angled-letter">a</div>
-                        <div class="angled-letter">l</div>
+                {isHighQualityLoaded && (    
+                <div className="overlay-text">
+                    <div className="angled-text-container">
+                        <div className="angled-letter">P</div>
+                        <div className="angled-letter">r</div>
+                        <div className="angled-letter">o</div>
+                        <div className="angled-letter">p</div>
+                        <div className="angled-letter">o</div>
+                        <div className="angled-letter">s</div>
+                        <div className="angled-letter">a</div>
+                        <div className="angled-letter">l</div>
                     </div>
-                    <p class="wedding-date">Our Special Moment</p>
+                    <p className="wedding-date">Our Special Moment</p>
                     <p className="wedding-date">Chicago, IL, USA</p>
-                </div>
+                </div>)}
             </section>
         
             {/* <!-- Proposal Details Section --> */}
             <section id="proposal-details" class="section">
                 <h2>Proposal Details</h2>
-                <div class="row-col-box">
-                    <div class="a">
+                <div className="row-col-box">
+                    <div className="a">
                      <p>I always knew I wanted to propose in Chicago—a city that held a special place in our relationship, especially at Buckingham Fountain. It was there that our bond began to deepen, moving beyond the group setting we were initially in.<br /><br />
 
                      &emsp; I envisioned turning the proposal into a memorable trip, allowing us to savor our engagement before returning to daily life. Chicago, followed by Toronto, seemed like the perfect itinerary.<br /><br />
@@ -77,12 +88,12 @@ function Proposal() {
 
                      &emsp; We later celebrated with a dinner at Bavette’s, enjoying an intimate setting to remember our moment in time. May 15, 2024, is now and forever our day—a memory we will cherish for a lifetime.</p>
                      <br /><br />
-                     <p><i>SASE National Conference in Chicago back in 2018</i></p>
-                     <img src={nc2018}  alt="Past Us" width="400vw" layout="center"/>
-                     <p><i>Us after the proposal, Chicago 2024</i></p>
-                     <img src={nc2018recreate}  alt="Us Now" width="400vw"/>
+                     <p><i><center>SASE National Conference, Chicago 2018</center></i></p>
+                     <img src={nc2018}  alt="Past Us" width="400vw" class="center"/>
+                     <p><i><center>Us after the proposal, Chicago 2024</center></i></p>
+                     <img src={nc2018recreate}  alt="Us Now" width="400vw" class="center"/>
                     </div>
-                    <div class="b">
+                    <div className="b">
                         {/* <!-- Additional content or images can go here --> */}
                         <div className="wedding-timeline">
                                 <div className="timeline">
