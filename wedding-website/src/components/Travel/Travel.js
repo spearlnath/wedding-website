@@ -57,6 +57,8 @@ function Travel() {
               data-src="https://www.google.com/maps/d/embed?mid=1HUF2J3IGmn0srTxZNXmde02nqv3njo0&ehbc=2E312F&noprof=1"
               width="1280"
               height="480"
+              allowFullScreen
+              frameborder="0"
             ></iframe>
           </div>
         </div>

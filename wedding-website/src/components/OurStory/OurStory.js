@@ -3,9 +3,11 @@
 import '../../App.css';
 import '../Home/Home.css';
 
-import landing from '../../assets/engagement photos/IMG_0982 2.avif';
-import { useEffect } from 'react';
+import './OurStory.css';
 
+import landing from '../../assets/Our Story/IMG_8605.JPG';
+import { useEffect } from 'react';
+import map from '../../assets/map.svg'
 function OurStory() {
 
     useEffect(() => {
@@ -31,7 +33,7 @@ function OurStory() {
             <section id="OurStory" class="fullscreen-section">
                 <img src={landing} class="background-image" alt="OurStory" />
                 
-                <div class="overlay-text">
+                <div class="overlay-text" id="ourstory">
                     <div class="angled-text-container">
                         <div class="angled-letter">O</div>
                         <div class="angled-letter">u</div>
@@ -43,8 +45,8 @@ function OurStory() {
                         <div class="angled-letter">y</div>
 \
                     </div>
-                    <p class="wedding-date"> it all started...</p>
-                    <p className="wedding-date">College Station, TX, USA</p>
+                    <p class="wedding-date" id="ourstory-tag"> it all started...</p>
+                    <p className="wedding-date" id="ourstory-location">College Station, TX, USA</p>
                 </div>
             </section>
         
@@ -63,6 +65,7 @@ function OurStory() {
                     </div>
                     <div class="b">
                         {/* <!-- Additional content or images can go here --> */}
+                        <img src = {map} class="hi" alt="our story map" />
                     </div>
                 </div>
             </section>
