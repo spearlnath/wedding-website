@@ -62,8 +62,18 @@ function Travel() {
             ></iframe>
           </div>
         </div>
-        <div className="b">
+        <div className="b" >
+          
           {/* Additional content */}
+          <h1>explore our map!</h1>
+          <p>In addition to being a one-stop shop for our wedding event locations, use the map to find all the best places to visit. Click on the icons to discover attractions, dining spots, and more!</p>
+          <p>
+            Sharon’s Recommendations for Monterey: Experience the best of the coastal food scene with savory delights like clam chowder in a sourdough bread bowl and fresh seafood at Cannery Row. Explore the fascinating exhibits at the Monterey Bay Aquarium, renowned for its stunning marine life and immersive experiences. Enjoy charming coffee shops and don't miss the scenic beauty of nearby Point Lobos State Natural Reserve, perfect for hiking and soaking in breathtaking ocean views!
+          </p>
+          <p>
+            Brandon’s Recommendations for Carmel-by-the-Sea: Delight in adventurous culinary experiences with spicy dishes and local favorites like artichoke soup. Discover unique boutiques and art galleries that showcase the town's artistic vibe. For fun activities, explore scenic hiking trails and relax at the beautiful Carmel Beach, or grab some boba tea to cool off after a day of shopping and exploration!
+          </p>
+
         </div>
       </div>
     </section>

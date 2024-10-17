@@ -9,7 +9,6 @@ import BigDay from './components/BigDay/BigDay'
 import Travel from './components/Travel/Travel';
 import FAQ from './components/FAQ/FAQ';
 
-import Engagement from './components/Engagement/Engagement';
 import Proposal   from './components/Proposal/Proposal';
 import OurStory   from './components/OurStory/OurStory';
 
@@ -45,7 +44,6 @@ function App() {
           element={
             <Fragment>
               <Header />
-              <Engagement />
               <Footer />
             </Fragment>
           } />

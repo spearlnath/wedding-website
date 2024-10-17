@@ -5,7 +5,7 @@
     width: 100%;
     overflow: hidden; /* Hide overflow content */
     position: relative; /* Required for absolute positioning */
-    bottom: 10%;
+
   }
   #lazy-iframe {
     position: absolute; /* Position iframe absolutely */

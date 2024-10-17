@@ -68,8 +68,8 @@ function Proposal() {
                         <div className="angled-letter">a</div>
                         <div className="angled-letter">l</div>
                     </div>
-                    <p className="wedding-date">Our Special Moment</p>
-                    <p className="wedding-date">Chicago, IL, USA</p>
+                    <p className="wedding-date" id="proposal-tag">Our Special Moment</p>
+                    <p className="wedding-date" id="proposal-location">Chicago, IL, USA</p>
                 </div>)}
             </section>
         
