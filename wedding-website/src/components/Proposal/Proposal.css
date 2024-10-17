@@ -3,12 +3,18 @@
 
 @media (max-width: 768px) {
   .angled-letter, .angled-letter-a, .angled-letter-r {
-      font-size: 5em; /* Adjust font size for smaller screens */
-  }
+    font-size: 5em; /* Adjust font size for smaller screens */
+}
+}
+#proposal-tag {
+  margin-top:20px;
+  margin-right:-20px;
+}
+#proposal-location{
+  margin-right:-20px;
 }
 .timeline::after {
     bottom: -5%;
-
   }
 .center {
   display:block;

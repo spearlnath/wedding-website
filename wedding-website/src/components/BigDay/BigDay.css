@@ -94,6 +94,34 @@
 
 
 
+/* Setting aspect ratio and matching the height of the timeline */
+.bordered-img {
+  width: 100%; /* Automatically adjusts width */
+  height: 100%; /* Matches the container's height */
+  aspect-ratio: 1/1.2; /* Forcing a square aspect ratio, adjust if necessary */
+  object-fit: cover; /* Ensures the image fills the area while maintaining its aspect ratio */
+}
+
+.sketch-border {
+  padding: 20px;
+  border-radius: 2px;        /* Slight rounding for a hand-drawn look */
+  background-color: #f2ebe2; /* Light beige background for aesthetics */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.sketch-border::before{
+  content: '';
+  object-fit: cover;
+  position: absolute;
+  width: 47%;
+  height: 94%;
+  border: 1px dashed #444;  /* Double border effect */
+  transform: translate(4px, 4px); /* Slight misalignment for sketch feel */
+  pointer-events: none;
+}
+
 /* Responsive font size */
 @media (max-width: 768px) {
   .container p {
@@ -115,5 +143,11 @@
     margin-top:10px;
     grid-row: 2;
     margin-top: 25%;
+  }
+ .sketch-border::before{
+    margin-top: 0%;
+    height: 39%;
+    left: 2%;
+    width: 94%;
   }
 }

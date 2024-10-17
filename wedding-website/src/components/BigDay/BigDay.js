@@ -7,7 +7,7 @@ import './BigDay.css';
 import bells from '../../assets/bells.avif';
 import teacup from '../../assets/teacup.avif';
 import cake from '../../assets/cake.avif';
-
+import eng from '../../assets/engagement photos/engphotoshoulder.avif'
 function BigDay() {
 
   
@@ -20,10 +20,13 @@ function BigDay() {
             });
         });
     });
+
     return () => {
 
     };
   }, []);
+
+  
 
   return (
     // <!-- The Big Day section -->
@@ -61,8 +64,11 @@ function BigDay() {
               </div>
            </div>
            <div className="b">
-              <p>with love</p>
-       
+              <div className="sketch-border">
+                <img src={eng} className="bordered-img" alt="bordered" />
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;"And over all these virtues put on love, which binds them all together in perfect unity."</p> 
+                <p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Colossians 3:14</p>
+              </div> 
            </div> 
           </div>
           

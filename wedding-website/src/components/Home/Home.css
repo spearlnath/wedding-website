@@ -199,7 +199,7 @@
   
   .wedding-date {
     margin-top: 2%; /* Adjust spacing between letters as needed */
-    margin-right: -25%; /* Adjust spacing between letters as needed */
+    margin-right: 0; /* Adjust spacing between letters as needed */
     font-family: "Cinzel", serif;
     font-optical-sizing: auto;
     font-weight: 400;
