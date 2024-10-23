@@ -7,8 +7,39 @@ import './Engagement.css';
 import landing from '../../assets/engagement photos/IMG_1878-Enhanced-NR.avif';
 import landingloqual from '../../assets/engagement photos/IMG_1878-Enhanced-NR loqual.avif';
 
+import img22 from '../../assets/engagement photos/engage_gal/img22.avif';
+import img23 from '../../assets/engagement photos/engage_gal/img23.avif';
+import img21 from '../../assets/engagement photos/engage_gal/img21.avif';
+import img20 from '../../assets/engagement photos/engage_gal/img20.avif';
+import img24 from '../../assets/engagement photos/engage_gal/img24.avif';
+import img18 from '../../assets/engagement photos/engage_gal/img18.avif';
+import img19 from '../../assets/engagement photos/engage_gal/img19.avif';
+import img25 from '../../assets/engagement photos/engage_gal/img25.avif';
+import img27 from '../../assets/engagement photos/engage_gal/img27.avif';
+import img26 from '../../assets/engagement photos/engage_gal/img26.avif';
+import  img9 from  '../../assets/engagement photos/engage_gal/img9.avif';
+import  img8 from  '../../assets/engagement photos/engage_gal/img8.avif';
+import  img5 from  '../../assets/engagement photos/engage_gal/img5.avif';
+import  img4 from  '../../assets/engagement photos/engage_gal/img4.avif';
+import  img6 from  '../../assets/engagement photos/engage_gal/img6.avif';
+import  img7 from  '../../assets/engagement photos/engage_gal/img7.avif';
+import  img3 from  '../../assets/engagement photos/engage_gal/img3.avif';
+import  img2 from  '../../assets/engagement photos/engage_gal/img2.avif';
+import img17 from '../../assets/engagement photos/engage_gal/img17.avif';
+import img16 from '../../assets/engagement photos/engage_gal/img16.avif';
+import img14 from '../../assets/engagement photos/engage_gal/img14.avif';
+import img15 from '../../assets/engagement photos/engage_gal/img15.avif';
+import img11 from '../../assets/engagement photos/engage_gal/img11.avif';
+import img10 from '../../assets/engagement photos/engage_gal/img10.avif';
+import img12 from '../../assets/engagement photos/engage_gal/img12.avif';
+import img13 from '../../assets/engagement photos/engage_gal/img13.avif';
 import { useEffect, useState } from 'react';
-
+import Masonry from 'react-masonry-css';
+const engageImages = [img22, img23, img21, img20, img24, 
+                        img18, img19, img25, img27, img26, 
+                        img9, img8, img5, img4, img6, img7, 
+                        img3, img2, img17, img16, img14, img15, 
+                        img11, img10, img12, img13];
 function Engagement() {
     const [isHighQualityLoaded, setIsHighQualityLoaded] = useState(false);
 
@@ -30,7 +61,13 @@ function Engagement() {
             }
         }
     }, []); // Empty dependency array means this effect runs only once after the component mounts
-
+    // Define breakpoints for responsive masonry layout
+    const breakpointColumnsObj = {
+       default: 4, // Default number of columns
+       1100: 3,    // Adjust number of columns based on screen size
+       700: 2,
+       500: 1,
+       };
     return (
         <div>
             {/* <!-- Engagement Section --> */}
@@ -58,14 +95,15 @@ function Engagement() {
             {/* <!-- Engagement Details Section --> */}
             <section id="engagement-details" class="section">
                 <h2>Engagement Photos</h2>
-                <div class="row-col-box">
-                    <div class="a">
-                        <p>Photos taken at</p>
-                    </div>
-                    <div class="b">
-                        {/* <!-- Additional content or images can go here --> */}
-                    </div>
-                </div>
+                <Masonry
+                    breakpointCols={breakpointColumnsObj}
+                    className="masonry-grid"
+                    columnClassName="masonry-grid_column"
+                >
+                    {engageImages.map((image, index) => (
+                        <img key={index} src={image} alt={`Engage ${index}`} className="masonry-item" />
+                    ))}
+                </Masonry>
             </section>
         
         </div>

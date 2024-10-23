@@ -46,7 +46,6 @@ import imgtng4 from '../../assets/proposal photos/proposal_gal/051524TONG80.avif
 import img5681 from '../../assets/proposal photos/proposal_gal/IMG_5681.avif';
 import img5647 from '../../assets/proposal photos/proposal_gal/IMG_5647.avif';
 import img9746 from '../../assets/proposal photos/proposal_gal/IMG_9746.avif';
-// List of imported images
 
 // List of imported images
 const proposalImages = [
@@ -56,11 +55,7 @@ const proposalImages = [
     img9746, img5647, img5681, img5654
 ];
 
-// const proposalImages = [
-//     img9306, img5105,  img9645, img5144, terminal, img5450,  img9707,  imgtng1,img2030, imgtng4, imgtng5, img9438, 
-//     img5925, img5445, img1344, img9454, img9552, img9710, ,img9746, pizza,img9746,img9416, img9495, img6020,
-//     img9856, img5573,  img9728, img5960, img5647, img5783,img5681,img5654
-// ];
+
 function Proposal() {
     const [isHighQualityLoaded, setIsHighQualityLoaded] = useState(false);
 

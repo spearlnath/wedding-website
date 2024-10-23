@@ -64,6 +64,7 @@ function BigDay() {
               </div>
            </div>
            <div className="b">
+            
               <div className="sketch-border">
                 <img src={eng} className="bordered-img" alt="bordered" />
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;"And over all these virtues put on love, which binds them all together in perfect unity."</p> 
