@@ -19,37 +19,48 @@ import { useEffect, useState } from 'react';
 import Masonry from 'react-masonry-css';
 
 // Import images from proposal_gal folder
-import img9306 from '../../assets/proposal photos/proposal_gal/IMG_9306.jpeg';
-import img5105 from '../../assets/proposal photos/proposal_gal/IMG_5105.jpeg';
-import img5144 from '../../assets/proposal photos/proposal_gal/IMG_5144.jpeg';
-import img9645 from '../../assets/proposal photos/proposal_gal/IMG_9645.jpeg';
-import terminal from '../../assets/proposal photos/proposal_gal/terminal.png';
-import img5450 from '../../assets/proposal photos/proposal_gal/IMG_5450.jpeg';
-import img9707 from '../../assets/proposal photos/proposal_gal/IMG_9707.jpeg';
-import img9438 from '../../assets/proposal photos/proposal_gal/IMG_9438.jpeg';
-import img6020 from '../../assets/proposal photos/proposal_gal/IMG_6020.jpeg';
-import img5925 from '../../assets/proposal photos/proposal_gal/IMG_5925.jpeg';
-import img5445 from '../../assets/proposal photos/proposal_gal/IMG_5445.jpeg';
-import img9454 from '../../assets/proposal photos/proposal_gal/IMG_9454.jpeg';
-import img9552 from '../../assets/proposal photos/proposal_gal/IMG_9552.jpeg';
-import img9710 from '../../assets/proposal photos/proposal_gal/IMG_9710.jpeg';
-import img9416 from '../../assets/proposal photos/proposal_gal/IMG_9416.jpeg';
-import img9495 from '../../assets/proposal photos/proposal_gal/IMG_9495.jpeg';
-import img9856 from '../../assets/proposal photos/proposal_gal/IMG_9856.jpeg';
-import img5573 from '../../assets/proposal photos/proposal_gal/IMG_5573.jpeg';
-import img5654 from '../../assets/proposal photos/proposal_gal/IMG_5654.jpeg';
-import img5992 from '../../assets/proposal photos/proposal_gal/IMG_5992.jpeg';
-import img5960 from '../../assets/proposal photos/proposal_gal/IMG_5960.jpeg';
-import img9728 from '../../assets/proposal photos/proposal_gal/IMG_9728.jpeg';
-import img5783 from '../../assets/proposal photos/proposal_gal/IMG_5783.jpeg';
-import img5259 from '../../assets/proposal photos/proposal_gal/IMG_5259.jpeg';
+import img9306 from '../../assets/proposal photos/proposal_gal/IMG_9306.avif';
+import img5105 from '../../assets/proposal photos/proposal_gal/IMG_5105.avif';
+import img5144 from '../../assets/proposal photos/proposal_gal/IMG_5144.avif';
+import img9645 from '../../assets/proposal photos/proposal_gal/IMG_9645.avif';
+import terminal from '../../assets/proposal photos/proposal_gal/terminal.avif';
+import img9707 from '../../assets/proposal photos/proposal_gal/IMG_9707.avif';
+import img9438 from '../../assets/proposal photos/proposal_gal/IMG_9438.avif';
+import img6020 from '../../assets/proposal photos/proposal_gal/IMG_6020.avif';
+import img5925 from '../../assets/proposal photos/proposal_gal/IMG_5925.avif';
+import img5445 from '../../assets/proposal photos/proposal_gal/IMG_5445.avif';
+import img9454 from '../../assets/proposal photos/proposal_gal/IMG_9454.avif';
+import img9552 from '../../assets/proposal photos/proposal_gal/IMG_9552.avif';
+import img9710 from '../../assets/proposal photos/proposal_gal/IMG_9710.avif';
+import img9416 from '../../assets/proposal photos/proposal_gal/IMG_9416.avif';
+import img9495 from '../../assets/proposal photos/proposal_gal/IMG_9495.avif';
+import img9856 from '../../assets/proposal photos/proposal_gal/IMG_9856.avif';
+import img5573 from '../../assets/proposal photos/proposal_gal/IMG_5573.avif';
+import img5654 from '../../assets/proposal photos/proposal_gal/IMG_5654.avif';
+import img5992 from '../../assets/proposal photos/proposal_gal/IMG_5992.avif';
+import img5960 from '../../assets/proposal photos/proposal_gal/IMG_5960.avif';
+import img9728 from '../../assets/proposal photos/proposal_gal/IMG_9728.avif';
+import img5783 from '../../assets/proposal photos/proposal_gal/IMG_5783.avif';
+import pizza from '../../assets/proposal photos/proposal_gal/IMG_9618.avif';
+import imgtng4 from '../../assets/proposal photos/proposal_gal/051524TONG80.avif';
+import img5681 from '../../assets/proposal photos/proposal_gal/IMG_5681.avif';
+import img5647 from '../../assets/proposal photos/proposal_gal/IMG_5647.avif';
+import img9746 from '../../assets/proposal photos/proposal_gal/IMG_9746.avif';
+// List of imported images
+
 // List of imported images
 const proposalImages = [
-    img9306, img5105, img5144, img9645, terminal, img5450, img9707, img9438,
+    img9306, img5105, img5144, img9645, terminal, imgtng4, img9707, img9438,
     img6020, img5925, img5445, img9454, img9552, img9710, img9416, img9495,
-    img9856, img5573, img5654, img5992, img5960, img9728, img5783, img5259
+    img9856, img5573, img5654, img5992, img5960, img9728, img5783, pizza,
+    img9746, img5647, img5681, img5654
 ];
 
+// const proposalImages = [
+//     img9306, img5105,  img9645, img5144, terminal, img5450,  img9707,  imgtng1,img2030, imgtng4, imgtng5, img9438, 
+//     img5925, img5445, img1344, img9454, img9552, img9710, ,img9746, pizza,img9746,img9416, img9495, img6020,
+//     img9856, img5573,  img9728, img5960, img5647, img5783,img5681,img5654
+// ];
 function Proposal() {
     const [isHighQualityLoaded, setIsHighQualityLoaded] = useState(false);
 
