@@ -53,7 +53,7 @@ function OurStory() {
             {/* <!-- OurStory Details Section --> */}
             <section id="OurStory-details" class="section">
                 <h2>Our Story Begins</h2>
-                <div class="row-col-box">
+                <div class="row-col-box ourstoryformat">
                     <div class="a">
                         <p>&emsp;Our journey began as college sweethearts at Texas A&M both pursuing our dream careers — he in industrial engineering and I in mechanical engineering. We crossed paths in a student organization and later competed fiercely as team leads in an international research competition. What started as a professional rivalry (perhaps one-sided on my part) quickly turned into a deep connection, and we fell in love amidst the challenges and excitement of our studies.<br /><br />
 

@@ -32,7 +32,7 @@ function BigDay() {
     // <!-- The Big Day section -->
     <section id="big-day" className="section">
           <h2>The Big Day Details</h2>
-          <div className="row-col-box">
+          <div className="row-col-box bigdayformat">
             <div className="a">
               <div className="wedding-timeline">
                 <div className="timeline">
