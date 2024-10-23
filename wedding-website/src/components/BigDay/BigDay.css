@@ -111,6 +111,9 @@
   object-fit: cover;
 }
 
+.sketch-border p{
+  margin: 6px;
+}
 .sketch-border::before{
   content: '';
   object-fit: cover;
@@ -133,13 +136,13 @@
   grid-template-rows: 1fr 1fr;
 }
   
- .row-col-box .a{
+ .bigdayformat .a {
     display: grid;
     gap: 15px;
     position: relative; /* To position the lines */
     grid-row: 1;
   }
- .row-col-box .b {
+ .bigdayformat .b {
     margin-top:10px;
     grid-row: 2;
     margin-top: 25%;
@@ -149,5 +152,16 @@
     height: 39%;
     left: 2%;
     width: 94%;
+  }
+}
+
+
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
   }
 }

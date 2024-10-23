@@ -32,7 +32,7 @@ function BigDay() {
     // <!-- The Big Day section -->
     <section id="big-day" className="section">
           <h2>The Big Day Details</h2>
-          <div className="row-col-box">
+          <div className="row-col-box bigdayformat">
             <div className="a">
               <div className="wedding-timeline">
                 <div className="timeline">
@@ -64,6 +64,7 @@ function BigDay() {
               </div>
            </div>
            <div className="b">
+            
               <div className="sketch-border">
                 <img src={eng} className="bordered-img" alt="bordered" />
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;"And over all these virtues put on love, which binds them all together in perfect unity."</p> 

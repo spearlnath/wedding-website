@@ -1,21 +1,60 @@
-// src/components/Travel.js
+// src/components/Proposal.js
 
 import '../../App.css';
 import '../Home/Home.css';
-import '../BigDay/BigDay.css'
+import '../BigDay/BigDay.css';
 import './Proposal.css';
 
 import landing from '../../assets/proposal photos/WeddingWebsiteLanding.avif';
 import landingloqual from '../../assets/proposal photos/Proposal_Full_loqual.avif';
 
-import nc2018 from '../../assets/proposal photos/nc2018.avif'
-import nc2018recreate from '../../assets/proposal photos/recreate.avif'
+import nc2018 from '../../assets/proposal photos/nc2018.avif';
+import nc2018recreate from '../../assets/proposal photos/recreate.avif';
+import proposal from '../../assets/proposal photos/proposal.avif';
+import kasama from '../../assets/proposal photos/kasama.avif';
+import fieldmuseum from '../../assets/proposal photos/fieldmuseum.avif';
+import bavetts from '../../assets/proposal photos/Bavetts.avif';
 
-import proposal from '../../assets/proposal photos/proposal.avif'
-import kasama from '../../assets/proposal photos/kasama.avif'
-import fieldmuseum from '../../assets/proposal photos/fieldmuseum.avif'
-import bavetts from '../../assets/proposal photos/Bavetts.avif'
 import { useEffect, useState } from 'react';
+import Masonry from 'react-masonry-css';
+
+// Import images from proposal_gal folder
+import img9306 from '../../assets/proposal photos/proposal_gal/IMG_9306.avif';
+import img5105 from '../../assets/proposal photos/proposal_gal/IMG_5105.avif';
+import img5144 from '../../assets/proposal photos/proposal_gal/IMG_5144.avif';
+import img9645 from '../../assets/proposal photos/proposal_gal/IMG_9645.avif';
+import terminal from '../../assets/proposal photos/proposal_gal/terminal.avif';
+import img9707 from '../../assets/proposal photos/proposal_gal/IMG_9707.avif';
+import img9438 from '../../assets/proposal photos/proposal_gal/IMG_9438.avif';
+import img6020 from '../../assets/proposal photos/proposal_gal/IMG_6020.avif';
+import img5925 from '../../assets/proposal photos/proposal_gal/IMG_5925.avif';
+import img5445 from '../../assets/proposal photos/proposal_gal/IMG_5445.avif';
+import img9454 from '../../assets/proposal photos/proposal_gal/IMG_9454.avif';
+import img9552 from '../../assets/proposal photos/proposal_gal/IMG_9552.avif';
+import img9710 from '../../assets/proposal photos/proposal_gal/IMG_9710.avif';
+import img9416 from '../../assets/proposal photos/proposal_gal/IMG_9416.avif';
+import img9495 from '../../assets/proposal photos/proposal_gal/IMG_9495.avif';
+import img9856 from '../../assets/proposal photos/proposal_gal/IMG_9856.avif';
+import img5573 from '../../assets/proposal photos/proposal_gal/IMG_5573.avif';
+import img5654 from '../../assets/proposal photos/proposal_gal/IMG_5654.avif';
+import img5992 from '../../assets/proposal photos/proposal_gal/IMG_5992.avif';
+import img5960 from '../../assets/proposal photos/proposal_gal/IMG_5960.avif';
+import img9728 from '../../assets/proposal photos/proposal_gal/IMG_9728.avif';
+import img5783 from '../../assets/proposal photos/proposal_gal/IMG_5783.avif';
+import pizza from '../../assets/proposal photos/proposal_gal/IMG_9618.avif';
+import imgtng4 from '../../assets/proposal photos/proposal_gal/051524TONG80.avif';
+import img5681 from '../../assets/proposal photos/proposal_gal/IMG_5681.avif';
+import img5647 from '../../assets/proposal photos/proposal_gal/IMG_5647.avif';
+import img9746 from '../../assets/proposal photos/proposal_gal/IMG_9746.avif';
+
+// List of imported images
+const proposalImages = [
+    img9306, img5105, img5144, img9645, terminal, imgtng4, img9707, img9438,
+    img6020, img5925, img5445, img9454, img9552, img9710, img9416, img9495,
+    img9856, img5573, img5654, img5992, img5960, img9728, img5783, pizza,
+    img9746, img5647, img5681, img5654
+];
+
 
 function Proposal() {
     const [isHighQualityLoaded, setIsHighQualityLoaded] = useState(false);
@@ -28,18 +67,17 @@ function Proposal() {
         // Scroll to top of the page when the component mounts
         window.scrollTo(0, 0);
 
+        // Add scroll animation
         window.addEventListener('scroll', function() {
             const sections = document.querySelectorAll('.section, .img, .content');
-        
-            console.log(sections);
             sections.forEach(section => {
                 const sectionTop = section.getBoundingClientRect().top;
                 const sectionBottom = section.getBoundingClientRect().bottom;
                 const windowHeight = window.innerHeight;
                 const sectionHeight = section.clientHeight;
-        
+
                 const visiblePercentage = (Math.min(sectionBottom, windowHeight) - Math.max(sectionTop, 0)) / sectionHeight;
-        
+
                 if (visiblePercentage >= 0.01) {
                     section.classList.add('fadeIn');
                     section.classList.remove('fadeOut');
@@ -49,32 +87,39 @@ function Proposal() {
                 }
             });
         });
-    }, []); // Empty dependency array means this effect runs only once after the component mounts
+    }, []);
+
+
+    // Define breakpoints for responsive masonry layout
+    const breakpointColumnsObj = {
+    default: 4, // Default number of columns
+    1100: 3,    // Adjust number of columns based on screen size
+    700: 2,
+    500: 1,
+    };
 
     return (
         <div>
-            {/* <!-- Proposal Section --> */}
-            <section id="Proposal" class="fullscreen-section">
-                <img src={isHighQualityLoaded ? landing : landingloqual}  class="background-image" alt="Proposal" />
-                {isHighQualityLoaded && (    
-                <div className="overlay-text">
-                    <div className="angled-text-container">
-                        <div className="angled-letter">P</div>
-                        <div className="angled-letter">r</div>
-                        <div className="angled-letter">o</div>
-                        <div className="angled-letter">p</div>
-                        <div className="angled-letter">o</div>
-                        <div className="angled-letter">s</div>
-                        <div className="angled-letter">a</div>
-                        <div className="angled-letter">l</div>
+            {/* Proposal Section */}
+            <section id="Proposal" className="fullscreen-section">
+                <img src={isHighQualityLoaded ? landing : landingloqual} className="background-image" alt="Proposal" />
+                {isHighQualityLoaded && (
+                    <div className="overlay-text">
+                        <div className="angled-text-container">
+                            {/* Angled letters for "Proposal" */}
+                            {"Proposal".split("").map((letter, index) => (
+                                <div key={index} className="angled-letter prop">{letter}</div>
+                            ))}
+                        </div>
+                        <p className="wedding-date" id="proposal-tag">Our Moment in Time</p>
+                        <p className="wedding-date" id="proposal-location">Chicago, IL, USA</p>
                     </div>
-                    <p className="wedding-date" id="proposal-tag">Our Special Moment</p>
-                    <p className="wedding-date" id="proposal-location">Chicago, IL, USA</p>
-                </div>)}
+                )}
             </section>
         
-            {/* <!-- Proposal Details Section --> */}
-            <section id="proposal-details" class="section">
+            {/* Proposal Details Section */}
+            <section id="proposal-details" className="section">
+                {/* Your existing Proposal details */}
                 <h2>Proposal Details</h2>
                 <div className="row-col-box">
                     <div className="a">
@@ -135,15 +180,21 @@ function Proposal() {
                 </div>
             </section>
         
-            {/* <!-- Proposal Photos Section --> */}
-            <section id="Proposal-photos" class="section">
+            {/* Proposal Photos Section with Masonry Layout */}
+            <section id="proposal-photos" className="section">
                 <h2>Proposal Photos</h2>
-                <div class="embed" data-embed-app="../assets/Proposal photos/grid/index.php" ></div>
+                <Masonry
+                    breakpointCols={breakpointColumnsObj}
+                    className="masonry-grid"
+                    columnClassName="masonry-grid_column"
+                >
+                    {proposalImages.map((image, index) => (
+                        <img key={index} src={image} alt={`Proposal ${index}`} className="masonry-item" />
+                    ))}
+                </Masonry>
             </section>
         </div>
-        
     );
-
 }
 
 export default Proposal;

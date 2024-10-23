@@ -2,7 +2,7 @@
 /* The actual timeline (the vertical ruler) */
 
 @media (max-width: 768px) {
-  .angled-letter, .angled-letter-a, .angled-letter-r {
+  .angled-letter .prop, .angled-letter-a .prop, .angled-letter-r .prop{
     font-size: 5em; /* Adjust font size for smaller screens */
 }
 }
@@ -22,4 +22,25 @@
   margin-right: auto;
   width: 50%;
 
+}
+
+/* src/components/Proposal.css */
+
+/* Masonry Grid */
+.masonry-grid {
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+
+.masonry-grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style the items */
+.masonry-item {
+  margin-bottom: 30px; /* space between items */
+  width: 100%;
+  object-fit: cover;
 }

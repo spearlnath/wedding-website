@@ -66,12 +66,6 @@
     top: 23%; /* Adjust top position percentage for cloud 3 */
   }
   
-  /* Responsive font size */
-  @media (max-width: 768px) {
-    .scrolling-images img {
-      width: 17%; /* Fixed width */ /* Adjust font size for smaller screens */
-    }
-  }
   .hidden {
       opacity: 0;
       visibility: hidden;
@@ -224,7 +218,7 @@
   }
   @media (max-width: 768px) {
     .angled-letter, .angled-letter-a, .angled-letter-r {
-        font-size: 3em; /* Adjust font size for smaller screens */
+        font-size: 4em; /* Adjust font size for smaller screens */
     }
     .angled-letter-a {
         margin-right: -1px;
@@ -237,6 +231,11 @@
       width:30vw;
       height:auto;
     }
+
+    .scrolling-images img {
+      width: 17%; /* Fixed width */ /* Adjust font size for smaller screens */
+    }
+
 
   }
   

@@ -11,6 +11,7 @@ import FAQ from './components/FAQ/FAQ';
 
 import Proposal   from './components/Proposal/Proposal';
 import OurStory   from './components/OurStory/OurStory';
+import Engagement from './components/Engagement/Engagement';
 
 import './App.css';
 
@@ -44,6 +45,7 @@ function App() {
           element={
             <Fragment>
               <Header />
+              <Engagement />
               <Footer />
             </Fragment>
           } />
