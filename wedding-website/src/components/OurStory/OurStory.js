@@ -9,58 +9,36 @@ import landing from '../../assets/Our Story/IMG_8605.JPG';
 import { useEffect } from 'react';
 import map from '../../assets/map.svg'
 
-import  img4 from '../../assets/Our Story/ourstory_gal/img4.avif';
-import img19 from '../../assets/Our Story/ourstory_gal/img19.avif';
-import img23 from '../../assets/Our Story/ourstory_gal/img23.avif';
-import img35 from '../../assets/Our Story/ourstory_gal/img35.avif';
-import  img8 from '../../assets/Our Story/ourstory_gal/img8.avif';
-import img42 from '../../assets/Our Story/ourstory_gal/img42.avif';
-import img15 from '../../assets/Our Story/ourstory_gal/img15.avif';
-import img39 from '../../assets/Our Story/ourstory_gal/img39.avif';
-import img38 from '../../assets/Our Story/ourstory_gal/img38.avif';
-import img14 from '../../assets/Our Story/ourstory_gal/img14.avif';
-import img9  from '../../assets/Our Story/ourstory_gal/img9.avif';
-import img43 from '../../assets/Our Story/ourstory_gal/img43.avif';
-import img34 from '../../assets/Our Story/ourstory_gal/img34.avif';
-import img22 from '../../assets/Our Story/ourstory_gal/img22.avif';
-import img18 from '../../assets/Our Story/ourstory_gal/img18.avif';
-import  img5 from '../../assets/Our Story/ourstory_gal/img5.avif';
-import img44 from '../../assets/Our Story/ourstory_gal/img44.avif';
-import img13 from '../../assets/Our Story/ourstory_gal/img13.avif';
-import img52 from '../../assets/Our Story/ourstory_gal/img52.avif';
-import img29 from '../../assets/Our Story/ourstory_gal/img29.avif';
-import  img2 from '../../assets/Our Story/ourstory_gal/img2.avif';
-import img48 from '../../assets/Our Story/ourstory_gal/img48.avif';
-import img25 from '../../assets/Our Story/ourstory_gal/img25.avif';
-import img33 from '../../assets/Our Story/ourstory_gal/img33.avif';
-import img32 from '../../assets/Our Story/ourstory_gal/img32.avif';
-import img24 from '../../assets/Our Story/ourstory_gal/img24.avif';
-import  img3 from '../../assets/Our Story/ourstory_gal/img3.avif';
-import img49 from '../../assets/Our Story/ourstory_gal/img49.avif';
-import img28 from '../../assets/Our Story/ourstory_gal/img28.avif';
-import img12 from '../../assets/Our Story/ourstory_gal/img12.avif';
-import img45 from '../../assets/Our Story/ourstory_gal/img45.avif';
-import img50 from '../../assets/Our Story/ourstory_gal/img50.avif';
-import img11 from '../../assets/Our Story/ourstory_gal/img11.avif';
-import img46 from '../../assets/Our Story/ourstory_gal/img46.avif';
-import img31 from '../../assets/Our Story/ourstory_gal/img31.avif';
-import img27 from '../../assets/Our Story/ourstory_gal/img27.avif';
-import  img1 from '../../assets/Our Story/ourstory_gal/img1.avif';
-import img26 from '../../assets/Our Story/ourstory_gal/img26.avif';
-import img30 from '../../assets/Our Story/ourstory_gal/img30.avif';
-import img47 from '../../assets/Our Story/ourstory_gal/img47.avif';
-import img10 from '../../assets/Our Story/ourstory_gal/img10.avif';
-import img51 from '../../assets/Our Story/ourstory_gal/img51.avif';
-import img37 from '../../assets/Our Story/ourstory_gal/img37.avif';
-import img21 from '../../assets/Our Story/ourstory_gal/img21.avif';
-import  img6 from '../../assets/Our Story/ourstory_gal/img6.avif';
-import img17 from '../../assets/Our Story/ourstory_gal/img17.avif';
-import img40 from '../../assets/Our Story/ourstory_gal/img40.avif';
-import img41 from '../../assets/Our Story/ourstory_gal/img41.avif';
-import img16 from '../../assets/Our Story/ourstory_gal/img16.avif';
-import  img7 from '../../assets/Our Story/ourstory_gal/img7.avif';
-import img20 from '../../assets/Our Story/ourstory_gal/img20.avif';
-import img36 from '../../assets/Our Story/ourstory_gal/img36.avif';
+import  img4 from '../../assets/Our Story/ourstory_gal/img7.avif';
+import img19 from '../../assets/Our Story/ourstory_gal/img5.avif';
+import img23 from '../../assets/Our Story/ourstory_gal/img45.avif';
+import img35 from '../../assets/Our Story/ourstory_gal/img6.avif';
+import  img8 from '../../assets/Our Story/ourstory_gal/img4.avif';
+import img42 from '../../assets/Our Story/ourstory_gal/img17.avif';
+import img15 from '../../assets/Our Story/ourstory_gal/img20.avif';
+import img39 from '../../assets/Our Story/ourstory_gal/img22.avif';
+import img38 from '../../assets/Our Story/ourstory_gal/img24.avif';
+import img14 from '../../assets/Our Story/ourstory_gal/img52.avif';
+import img9  from '../../assets/Our Story/ourstory_gal/img12.avif';
+import img43 from '../../assets/Our Story/ourstory_gal/img29.avif';
+import img34 from '../../assets/Our Story/ourstory_gal/img33.avif';
+import img22 from '../../assets/Our Story/ourstory_gal/img48.avif';
+import img18 from '../../assets/Our Story/ourstory_gal/img49.avif';
+import  img5 from '../../assets/Our Story/ourstory_gal/img50.avif';
+import img44 from '../../assets/Our Story/ourstory_gal/img3.avif';
+import img13 from '../../assets/Our Story/ourstory_gal/img27.avif';
+import img52 from '../../assets/Our Story/ourstory_gal/img31.avif';
+import img29 from '../../assets/Our Story/ourstory_gal/img34.avif';
+import  img2 from '../../assets/Our Story/ourstory_gal/img36.avif';
+import img48 from '../../assets/Our Story/ourstory_gal/img41.avif';
+import img25 from '../../assets/Our Story/ourstory_gal/img19.avif';
+import img33 from '../../assets/Our Story/ourstory_gal/img47.avif';
+import img32 from '../../assets/Our Story/ourstory_gal/img1.avif';
+import img24 from '../../assets/Our Story/ourstory_gal/img2.avif';
+import  img3 from '../../assets/Our Story/ourstory_gal/img18.avif';
+import img49 from '../../assets/Our Story/ourstory_gal/img23.avif';
+import img28 from '../../assets/Our Story/ourstory_gal/img8.avif';
+
 
 import Masonry from 'react-masonry-css';
 
@@ -69,10 +47,7 @@ const ourStoryImages = [ img4, img19, img23, img35,  img8, img42, img15,
                          img39, img38, img14, img9 , img43, img34, img22, 
                          img18,  img5, img44, img13, img52, img29,  img2, 
                          img48, img25, img33, img32, img24,  img3, img49, 
-                         img28, img12, img45, img50, img11, img46, img31, 
-                         img27,  img1, img26, img30, img47, img10, img51, 
-                         img37, img21,  img6, img17, img40, img41, img16,  
-                         img7, img20, img36];
+                         img28 ];
 
 function OurStory() {
 
