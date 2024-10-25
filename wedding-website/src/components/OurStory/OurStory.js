@@ -55,24 +55,33 @@ function OurStory() {
         // Scroll to top of the page when the component mounts
         window.scrollTo(0, 0);
 
+        // Add scroll animation
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section, .img, .content');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const sectionBottom = section.getBoundingClientRect().bottom;
+                const windowHeight = window.innerHeight;
+                const sectionHeight = section.clientHeight;
 
-        // Smoothly scroll to the specific section if a hash is present in the URL
-        const hash = window.location.hash;
-        if (hash) {
-            const targetSection = document.querySelector(hash);
-            if (targetSection) {
-                setTimeout(() => {
-                    targetSection.scrollIntoView({ behavior: 'smooth' });
-                }, 300); // Delay to ensure the page has scrolled to the top first
-            }
-        }
-    }, []); // Empty dependency array means this effect runs only once after the component mounts
+                const visiblePercentage = (Math.min(sectionBottom, windowHeight) - Math.max(sectionTop, 0)) / sectionHeight;
+
+                if (visiblePercentage >= 0.01) {
+                    section.classList.add('fadeIn');
+                    section.classList.remove('fadeOut');
+                } else {
+                    section.classList.remove('fadeIn');
+                    section.classList.add('fadeOut');
+                }
+            });
+        });
+    }, []);
     // Define breakpoints for responsive masonry layout
     const breakpointColumnsObj = {
         default: 4, // Default number of columns
-        1100: 3,    // Adjust number of columns based on screen size
-        700: 2,
-        500: 1,
+        1100: 4,    // Adjust number of columns based on screen size
+        700: 4,
+        500: 2,
         };
     return (
         <div>
@@ -125,7 +134,10 @@ function OurStory() {
                     columnClassName="masonry-grid_column"
                 >
                     {ourStoryImages.map((image, index) => (
-                        <img key={index} src={image} alt={`OurStory ${index}`} className="masonry-item" />
+                        <img key={index} 
+                        src={image} 
+                        alt={`OurStory ${index}`} 
+                        loading="lazy" className="masonry-item" />
                     ))}
                 </Masonry>
             </section>

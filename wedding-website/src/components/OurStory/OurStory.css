@@ -3,13 +3,14 @@
 }
 #ourstory-tag {
   text-align:right;
-  margin-top:-20px;
+  margin-top:0px;
+  margin-right:-50px;
 }
 
 #ourstory-location{
   text-align:right;
+  margin-right:-50px;
 }
-
 
 .ourstoryformat .a {
   align-items: stretch;
@@ -26,10 +27,12 @@
     margin-top:-60px;
   }
   #ourstory-tag {
-    margin-bottom:-10px; 
+    margin-top:20px;
+    margin-right:0px;
   }
   #ourstory-location{
-    margin-bottom:-10px;
+    margin-bottom:10px;
+    margin-right:0px;
   }
 
   .ourstoryformat p {
@@ -47,13 +50,7 @@
   }
 
 }
-@media (max-width: 650px) {
-  .ourstoryformat img{
-    grid-row: 2;
-    width: 125%;
-    margin-top:0;
-  }
-}
+
 
 .center {
   display:block;
@@ -61,4 +58,69 @@
   margin-right: auto;
   width: 50%;
 
+}
+
+/* Default Masonry Grid Item Spacing */
+.masonry-item {
+  margin-bottom: 10px; /* Space between images (acts as row spacing) */
+}
+
+/* Masonry grid row-gap for larger screens */
+.masonry-grid {
+  display: flex;
+  margin-left: -10px; /* Adjust margin for columns */
+  row-gap: 10px; /* Default row spacing */
+  width: auto;
+}
+
+.masonry-grid_column {
+  padding-left: 10px;
+  background-clip: padding-box;
+}
+
+/* Adjust Spacing for Medium Screens */
+@media (max-width: 1100px) {
+  .masonry-item {
+      margin-bottom: 8px; /* Reduce space between rows */
+  }
+
+  .masonry-grid {
+      margin-left: -8px;
+      row-gap: 15px; /* Reduce row-gap for medium screens */
+  }
+
+  .masonry-grid_column {
+      padding-left: 8px;
+  }
+}
+
+/* Adjust Spacing for Smaller Screens */
+@media (max-width: 700px) {
+  .masonry-item {
+      margin-bottom: 5px;
+  }
+
+  .masonry-grid {
+      margin-left: -5px;
+      row-gap: 10px; /* Reduce row-gap for small screens */
+  }
+
+  .masonry-grid_column {
+      padding-left: 5px;
+  }
+}
+
+/* Adjust Spacing for Very Small Screens */
+@media (max-width: 500px) {
+  .masonry-item {
+      margin-bottom: 2px;
+  }
+
+  .masonry-grid {
+      row-gap: 5px; /* Further reduce row-gap for very small screens */
+  }
+
+  .masonry-grid_column {
+      padding-left: 5px;
+  }
 }
