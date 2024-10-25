@@ -43,16 +43,18 @@ import img9728 from '../../assets/proposal photos/proposal_gal/IMG_9728.avif';
 import img5783 from '../../assets/proposal photos/proposal_gal/IMG_5783.avif';
 import pizza from '../../assets/proposal photos/proposal_gal/IMG_9618.avif';
 import imgtng4 from '../../assets/proposal photos/proposal_gal/051524TONG80.avif';
-import img5681 from '../../assets/proposal photos/proposal_gal/IMG_5681.avif';
 import img5647 from '../../assets/proposal photos/proposal_gal/IMG_5647.avif';
 import img9746 from '../../assets/proposal photos/proposal_gal/IMG_9746.avif';
+
+import img5728 from '../../assets/proposal photos/proposal_gal/IMG_5728.avif';
+import img5659 from '../../assets/proposal photos/proposal_gal/IMG_5659.avif';
 
 // List of imported images
 const proposalImages = [
     img9306, img5105, img5144, img9645, terminal, imgtng4, img9707, img9438,
     img6020, img5925, img5445, img9454, img9552, img9710, img9416, img9495,
-    img9856, img5573, img5654, img5992, img5960, img9728, img5783, pizza,
-    img9746, img5647, img5681, img5654
+    img5659, img5573, img5654, img5992, img5960, img9728, img5783, pizza,
+    img9746, img5647, img9856, img5728
 ];
 
 
@@ -93,9 +95,9 @@ function Proposal() {
     // Define breakpoints for responsive masonry layout
     const breakpointColumnsObj = {
     default: 4, // Default number of columns
-    1100: 3,    // Adjust number of columns based on screen size
-    700: 2,
-    500: 1,
+    1100: 4,    // Adjust number of columns based on screen size
+    700: 4,
+    500: 2,
     };
 
     return (

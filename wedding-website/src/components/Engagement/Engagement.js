@@ -62,8 +62,8 @@ function Engagement() {
     const breakpointColumnsObj = {
        default: 3, // Default number of columns
        1100: 3,    // Adjust number of columns based on screen size
-       700: 2,
-       500: 4,
+       700: 4,
+       500: 3,
        };
     return (
         <div>
