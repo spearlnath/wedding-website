@@ -118,11 +118,9 @@ function OurStory() {
                         &emsp;Graduation marked the beginning of a new adventure, as we embraced the demands of our respective careers. He ventured to Silicon Valley, diving into the tech world, while I reached for the stars with a job working on the International Space Station. Though we are separated by miles, our bond remains unbreakable, and we continue to support each other as we navigate the complexities of adulthood and the pursuit of our dreams.<br /><br />
 
                         &emsp; We’re over the over moon to celebrate our love story with all of you in beautiful Carmel, California! </p>
+                        
                     </div>
-                    <div class="b">
-                        {/* <!-- Additional content or images can go here --> */}
-                        <img src = {map} class="hi" alt="our story map" />
-                    </div>
+                    <img src = {map} class="hi" alt="our story map" />
                 </div>
             </section>
             {/* Proposal Photos Section with Masonry Layout */}
