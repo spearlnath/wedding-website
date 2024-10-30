@@ -218,7 +218,7 @@
   }
   @media (max-width: 768px) {
     .angled-letter, .angled-letter-a, .angled-letter-r {
-        font-size: 4em; /* Adjust font size for smaller screens */
+        font-size: 3.7em; /* Adjust font size for smaller screens */
     }
     .angled-letter-a {
         margin-right: -1px;
@@ -232,8 +232,13 @@
       height:auto;
     }
 
+    .overlay-text {
+      margin-top: 70px;
+      margin-left: -5px;
+    }
     .scrolling-images img {
       width: 17%; /* Fixed width */ /* Adjust font size for smaller screens */
+      margin-top: 30px;
     }
 
 

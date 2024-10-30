@@ -115,7 +115,7 @@ function Home() {
       />
       
       {isHighQualityLoaded && (
-        <>
+        <div className = "title-text">
           <button id="rsvpButton" className="rsvp-button">
             <img src={rsvp} id="rsvp-button-img" width="480" height="360" alt="RSVP Button" onClick={handleRSVPClick} />
           </button>
@@ -151,7 +151,7 @@ function Home() {
             <img src={cloud2} className="cloud cloud2" width="237" height="160" alt="Cloud" />
             <img src={cloud3} className="cloud cloud3" width="237" height="134" alt="Cloud" />
           </div>
-        </>
+        </div>
       )}
 
       <section id="rsvp" className="section"></section>
