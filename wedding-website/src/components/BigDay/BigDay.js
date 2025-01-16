@@ -40,7 +40,7 @@ function BigDay() {
                         <div className="content">
                             <img src={bells} className="details-img" width="370" height="370" alt="wedding detail imgs"/>
                             <h3>Ceremony</h3>
-                            <h3>3:30 PM</h3>
+                            <h3>4:00 PM</h3>
                             <p>At the Upper Courtyard<br />La Playa, Carmel, CA</p>
                         </div>
                     </div>
