@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import '../../App.css'; // If you have specific styles
 import './Header.css'; // If you have specific styles
 
-import logoimg from '../../assets/sticky-logo2.avif';
+import logoimg from '../../assets/logo.png';
 
 function Header() {
   const navigate = useNavigate();
@@ -98,6 +98,7 @@ function Header() {
           <li><a href="#big-day">The Big Day</a></li>
           <li><a href="#travel">Travel</a></li>
           <li><a href="#faq">FAQ</a></li>
+          <li><a href="https://www.zola.com/registry/sharonandbrandon2025">Registry</a></li>
         </ul>
       </nav>
     </header>
