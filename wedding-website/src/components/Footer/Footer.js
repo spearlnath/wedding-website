@@ -28,7 +28,7 @@ function Footer() {
                     <li>< Link to='/ourstory'>I. OUR STORY</Link></li>
                     <li>< Link to='/proposal'>II. PROPOSAL</Link></li>
                     <li>< Link to='/enagement'>III. ENGAGEMENT</Link></li>
-                    <li><a href="https://www.crateandbarrel.com/lia-pendant-light-with-shade/s594344?a=1552&campaignid=10461646743&adgroupid=103999389019&targetid=pla-298538622663&pla_sku=594344&pcat=HSW&ag=adult&scid=scplp594344&sc_intid=594344&gad_source=1&gclid=Cj0KCQjwzby1BhCQARIsAJ_0t5Mz64m98gtvqwtcGsiWPirecKKoc-afq6iMSQWtmOF9FXx0zoHk4bkaAkofEALw_wcB">IV. REGISTRY</a></li>
+                    <li><a href="https://www.zola.com/registry/sharonandbrandon2025">IV. REGISTRY</a></li>
                  </ul>
               </div>
 
