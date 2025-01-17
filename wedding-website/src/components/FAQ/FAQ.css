@@ -17,14 +17,13 @@
 
 /* --------------FAQ Section-------------- */
 .faq-container {
-
     align-items: center; /* Vertically center */
     background-color: #e0f2f1; /* Set background color */
     padding: 20px; /* Add padding */
     max-width: 370px; /* Set maximum width */
     margin: 0 auto; /* Center horizontally */
     z-index: 4;
-    text-align: center;
+    
 }
 
 /* Reduce margin for h2 within .faq-container */
@@ -38,16 +37,41 @@
     cursor: pointer; /* Set cursor */
     z-index: 1;
     pointer-events: auto;
+    
 }
 
-/* Answer styling */
+.faq-item.active .question {
+  color: #555;
+
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2em;
+  gap: 1rem;
+}
 .answer {
-    display: none; /* Hide answer by default */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  font-size: 1em;
+  text-align: center;
+  color: #555;
+}
+.answer p{
+  color: #555;
+}
+.answer a:link {
+  color: rgb(63, 63, 214); /* Unvisited link */
 }
 
-
-/* Toggle styling */
-.toggle {
-  float: right; /* Float toggle to the right */
-  cursor: pointer; /* Set cursor */
+.answer a:visited {
+  color: #9b59b6; /* Visited link */
 }
+
+.answer a:hover {
+  color: green; /* On hover */
+}
+

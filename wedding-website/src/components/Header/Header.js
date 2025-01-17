@@ -14,14 +14,17 @@ function Header() {
     // Smooth Scroll for Navigation
     const handleNavigation = (e) => {
       const href = e.currentTarget.href;
-      const isExternalLink = /^https?:\/\//.test(href); // Check if the href starts with http:// or https://
+      const isExternalLink =  href === "https://www.zola.com/registry/sharonandbrandon2025"; // Check if Zola Link
 
       if (isExternalLink) {
+        console.log(isExternalLink)
         return; // Allow the default behavior for external links
       }
+
       e.preventDefault();
       const targetId = new URL(e.currentTarget.href).hash.substring(1);
       navigate('/', { state: { scrollTo: targetId } });
+
     };
 
     const anchors = document.querySelectorAll('nav a');
