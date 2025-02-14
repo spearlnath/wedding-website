@@ -233,15 +233,33 @@
     }
 
     .overlay-text {
-      margin-top: 70px;
+      margin-top: 90px;
       margin-left: -5px;
     }
     .scrolling-images img {
-      width: 17%; /* Fixed width */ /* Adjust font size for smaller screens */
-      margin-top: 30px;
+      width: 14%; /* Fixed width */ /* Adjust font size for smaller screens */
+      margin-top: 60px;
     }
 
-
+    .plane {
+      left: 20%; /* Adjust left position percentage for the plane */
+      top: 20%; /* Adjust top position percentage for the plane */
+    }
+    
+    .cloud1 { /* Left Cloud */
+      right: 67%; /* Adjust right position percentage for cloud 1 */
+      top: 48%; /* Adjust top position percentage for cloud 1 */
+    }
+    
+    .cloud2 { /* Top Center Cloud */ 
+      right: 45%; /* Adjust right position percentage for cloud 2 */
+      top: 9%; /* Adjust top position percentage for cloud 2 */
+    }
+    
+    .cloud3 { /* Right Cloud */
+      right: 22%; /* Adjust right position percentage for cloud 3 */
+      top: 23%; /* Adjust top position percentage for cloud 3 */
+    }
   }
   
   

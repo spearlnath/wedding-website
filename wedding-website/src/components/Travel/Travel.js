@@ -4,7 +4,7 @@ import '../../App.css';
 import './Travel.css';
 
 import compass from '../../assets/compass.png';
-
+import hotel from '../../assets/hotel.png'
 function Travel() {
   // State to detect if the screen is mobile or not
   const [isMobile, setIsMobile] = useState(false);
@@ -73,19 +73,30 @@ function Travel() {
       <h2>Travel</h2>
       {/* Render button for Apple Map only on mobile */}
       {isMobile && (
-        <div id="button-container">
-          <a
-            href="https://www.google.com/maps/d/embed?mid=1HUF2J3IGmn0srTxZNXmde02nqv3njo0&ehbc=2E312F&noprof=1"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={compass}
-              alt="Open Apple Guide"
-              style={{ width: '100px', height: 'auto' }} // Adjust dimensions as needed
-            />
-          </a>
-        </div>
+         <div id="button-container" style={{ display: 'flex', gap: '10px' }}>
+         <a
+           href="https://www.google.com/maps/d/embed?mid=1HUF2J3IGmn0srTxZNXmde02nqv3njo0&ehbc=2E312F&noprof=1"
+           target="_blank"
+           rel="noopener noreferrer"
+         >
+           <img
+             src={compass}
+             alt="Open Apple Guide"
+             style={{ width: '100px', height: 'auto' }} // Adjust dimensions as needed
+           />
+         </a>
+         <a
+           href="https://hotelblocks.zola.com/000223176/EventPage8021489"
+           target="_blank"
+           rel="noopener noreferrer"
+         >
+           <img
+             src={hotel}
+             alt="Open Hotel Rates"
+             style={{ width: '100px', height: 'auto' }} // Adjust dimensions as needed
+           />
+         </a>
+       </div>
       )}
       <div className="row-col-box" id="Travel">
         {/* Render div class "a" only for non-mobile devices */}
@@ -102,6 +113,7 @@ function Travel() {
                 data-src="https://www.google.com/maps/d/embed?mid=1HUF2J3IGmn0srTxZNXmde02nqv3njo0&ehbc=2E312F&noprof=1"
                 width="1280"
                 height="480"
+                frameborder="0"
               ></iframe>
             </div>
           </div>
