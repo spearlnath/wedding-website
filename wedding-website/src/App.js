@@ -35,7 +35,7 @@ function App() {
         />
         {/* Registry Redirect Route */}
         <Route 
-          path="/registry" 
+          path="/weddingregistry" 
           element={
             <REGISTRY_REDIRECT />} />
         {/* Subpage Route */}
