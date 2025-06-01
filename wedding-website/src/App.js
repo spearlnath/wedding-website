@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import RSVP_REDIRECT from './components/RSVP_Redirect/RSVP_Redirect';
+
 import BigDay from './components/BigDay/BigDay'
 import Travel from './components/Travel/Travel';
 import FAQ from './components/FAQ/FAQ';
@@ -39,14 +39,7 @@ function App() {
           element={
             <REGISTRY_REDIRECT />} />
         {/* Subpage Route */}
-        {/* RSVP Redirect Route */}
         <Route 
-          path="/rsvp" 
-          element={
-            <RSVP_REDIRECT />} />
-        {/* Subpage Route */}
-        
-        {/* <Route 
           path="/engagement" 
           element={
             <Fragment>
@@ -54,8 +47,7 @@ function App() {
               <Engagement />
               <Footer />
             </Fragment>
-          } /> */}
-
+          } />
         <Route 
           path="/proposal" 
           element={

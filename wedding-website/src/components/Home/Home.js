@@ -1,6 +1,6 @@
 // src/components/Home.js
 import { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import '../../App.css';
 import './Home.css';
@@ -16,7 +16,7 @@ import cloud3 from '../../assets/Cloud_3.avif';
 
 function Home() {
   const location = useLocation();
-  const navigate = useNavigate();
+
   const [isHighQualityLoaded, setIsHighQualityLoaded] = useState(false);
 
   useEffect(() => {
@@ -102,7 +102,7 @@ function Home() {
   }, []);
 
   const handleRSVPClick = () => {
-    navigate('/rsvp');
+    window.location.href = 'https://www.zola.com/wedding/sharonandbrandon2025/rsvp';
   };
 
   return (
