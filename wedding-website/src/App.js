@@ -35,17 +35,18 @@ function App() {
         />
         {/* Registry Redirect Route */}
         <Route 
-          path="/rsvp" 
+          path="/registry" 
           element={
             <REGISTRY_REDIRECT />} />
         {/* Subpage Route */}
         {/* RSVP Redirect Route */}
         <Route 
-          path="/something" 
+          path="/rsvp" 
           element={
             <RSVP_REDIRECT />} />
         {/* Subpage Route */}
-        <Route 
+        
+        {/* <Route 
           path="/engagement" 
           element={
             <Fragment>
@@ -53,7 +54,8 @@ function App() {
               <Engagement />
               <Footer />
             </Fragment>
-          } />
+          } /> */}
+
         <Route 
           path="/proposal" 
           element={
