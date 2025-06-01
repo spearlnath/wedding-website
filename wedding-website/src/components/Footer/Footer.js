@@ -27,7 +27,7 @@ function Footer() {
                   <ul>
                     <li>< Link to='/ourstory'>I. OUR STORY</Link></li>
                     <li>< Link to='/proposal'>II. PROPOSAL</Link></li>
-                    <li>< Link to='/enagement'>III. ENGAGEMENT</Link></li>
+                    <li>< Link to='/engagement'>III. ENGAGEMENT</Link></li>
                     <li><a href="https://www.zola.com/registry/sharonandbrandon2025">IV. REGISTRY</a></li>
                  </ul>
               </div>

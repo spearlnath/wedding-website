@@ -8,7 +8,7 @@ import RSVP_REDIRECT from './components/RSVP_Redirect/RSVP_Redirect';
 import BigDay from './components/BigDay/BigDay'
 import Travel from './components/Travel/Travel';
 import FAQ from './components/FAQ/FAQ';
-import RegistryRedirect from './components/Registry_Redirect/Registry_Redirect'
+import REGISTRY_REDIRECT from './components/Registry_Redirect/Registry_Redirect'
 import Proposal   from './components/Proposal/Proposal';
 import OurStory   from './components/OurStory/OurStory';
 import Engagement from './components/Engagement/Engagement';
@@ -37,7 +37,7 @@ function App() {
         <Route 
           path="/registry" 
           element={
-            <RegistryRedirect />} />
+            <REGISTRY_REDIRECT />} />
         {/* Subpage Route */}
         {/* RSVP Redirect Route */}
         <Route 
@@ -46,7 +46,7 @@ function App() {
             <RSVP_REDIRECT />} />
         {/* Subpage Route */}
         <Route 
-          path="/enagement" 
+          path="/engagement" 
           element={
             <Fragment>
               <Header />
@@ -70,7 +70,6 @@ function App() {
             <OurStory />
             <Footer />
           </Fragment>} />
-
       </Routes>
     </Router>
   );

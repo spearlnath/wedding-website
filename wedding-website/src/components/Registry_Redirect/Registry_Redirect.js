@@ -15,7 +15,7 @@ function Registry_Redirect() {
         <div className="registry-redirect-body">
             <div className="registry-redirect-container">
                 <h1>Hold Tight!</h1>
-                <p>We're taking you to our Registry page.</p>
+                <p>We're taking you to our wedding registry page.</p>
                 <div className="registry-redirect-loader"></div>
             </div>
         </div>
